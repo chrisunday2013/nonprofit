@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'whitenoise.runserver_nostatic',  
-    'djangocms_owl',
+
 ]
 
 MIDDLEWARE = [
@@ -147,7 +147,3 @@ STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK ="bootstrap4"
-
-DJANGOCMS_OWL_INCLUDE_CSS = True
-DJANGOCMS_OWL_INCLUDE_JS_OWL = True
-DJANGOCMS_OWL_INCLUDE_JS_JQUERY = True
