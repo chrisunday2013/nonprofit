@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'nonprofit.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
         'USER': 'postgres',
         'PASSWORD': 'su1bzBQ7IB2KZvQMpOeq',
