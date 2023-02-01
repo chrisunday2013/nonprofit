@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -17,9 +18,9 @@
         <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="{% static 'assets/lib/flaticon/font/flaticon.css'%}" rel="stylesheet">
+        <link href="{% static 'assets/lib/animate/animate.min.css'%}" rel="stylesheet">
+        <link href="{% static 'assets/lib/owlcarousel/assets/owl.carousel.min.css'%}" rel="stylesheet">
 
         <!-- Template Stylesheet -->
         <link href="{% static 'assets/css/style.css'%}" rel="stylesheet">
@@ -802,11 +803,11 @@
                             <p><i class="fa fa-phone-alt"></i>+012 345 0000000000</p>
                             <p><i class="fa fa-envelope"></i>info@example.com</p>
                             <div class="footer-social">
-                                <a class="btn btn-custom" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-custom" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-custom" href=""><i class="fab fa-youtube"></i></a>
-                                <a class="btn btn-custom" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-custom" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-custom" href="https://freewebsitecode.com"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-custom" href="https://facebook.com/freewebsitecode"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-custom" href="https://www.youtube.com/channel/UC9HlQRmKgG3jeVD_fBxj1Pw/videos"><i class="fab fa-youtube"></i></a>
+                                <a class="btn btn-custom" href="https://freewebsitecode.com"><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-custom" href="https://freewebsitecode.com"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     </div>
@@ -857,11 +858,11 @@
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/counterup/counterup.min.js "></script>
-        <script src="lib/parallax/parallax.min.js"></script>
+        <script src="{% static 'assets/lib/easing/easing.min.js' %}"></script>
+        <script src="{% static 'assets/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'assets/lib/waypoints/waypoints.min.js' %}"></script>
+        <script src="{% static 'assets/lib/counterup/counterup.min.js ' %}"></script>
+        <script src="{% static 'assets/lib/parallax/parallax.min.js' %}"></script>
         
         <!-- Contact Javascript File -->
         <script src="{% static 'assets/mail/jqBootstrapValidation.min.js' %}"></script>
