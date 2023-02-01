@@ -18,7 +18,7 @@
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
         <link href="{% static 'assets/lib/flaticon/font/flaticon.css'%}" rel="stylesheet">
-        <link href="{% static 'assets/lib/animate/animate.min.css'%}" rel="stylesheet">
+        <link href="{% static 'assets/lib/animate/animate.min.css'}" rel="stylesheet">
         <link href="{% static 'assets/lib/owlcarousel/assets/owl.carousel.min.css'%}" rel="stylesheet">
 
         <!-- Template Stylesheet -->
@@ -111,9 +111,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <!-- <div class="about-img" data-parallax="scroll" data-image-src="{% static 'assets/img/about.jpg' %}"></div> -->
-                        <img class="about-img" data-parallax="scroll" data-image-src="{% static 'assets/img/about.jpg' %}">
-            
+                        <div class="about-img" data-parallax="scroll" data-image-src="{% static 'assets/img/about.jpg' %}"></div>
                     </div>
                     <div class="col-lg-6">
                         <div class="section-header">
@@ -425,6 +423,7 @@
         </div>
 
         <!-- JavaScript Libraries -->
+        <script src="jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
         <script src="{% static 'assets/lib/easing/easing.min.js' %}"></script>
