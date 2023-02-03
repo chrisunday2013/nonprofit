@@ -19,7 +19,7 @@ SECRET_KEY = 'django-insecure-d%$nx#=79c%qedj3)2^7be#@&x6xn3+c)n5j^i5r0!c!k$mnpn
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+ALLOWED_HOSTS = ['nene.up.railway.app']
 
 # CSRF_TRUSTED_ORIGINS = ['']
 
@@ -130,7 +130,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles', )
 
 MEDIA_URL = '/media/'
 
