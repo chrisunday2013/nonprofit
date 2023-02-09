@@ -22,17 +22,22 @@
         <link href="{% static 'assets/lib/animate/animate.min.css'%}" rel="stylesheet">
         <link href="{% static 'assets/lib/owlcarousel/assets/owl.carousel.min.css'%}" rel="stylesheet">
 
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fonticonpicker/2.0.0/css/jquery.fonticonpicker.css" integrity="sha512-FbIs4oCJNjryyTiZpg//N39OphCmJQdfQzmG4Aj8Wulrce89lLhJxqd3Yt/OmzUBSNPGlJ5pJwjYI59Qvs9FUA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
-        -->
+        <link href="{% static 'assets/vendor/animate.css/animate.min.css'%}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css'%}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css'%}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
+      
 
         <link href="{% static 'assets/css/style.css'%}" rel="stylesheet">
+        <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
     </head>
 
     <body>
         <!-- Top Bar Start -->
+
+<!-- 
         <div class="top-bar d-none d-md-block">
             <div class="container-fluid">
                 <div class="row">
@@ -60,10 +65,14 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
+
+
         <!-- Top Bar End -->
 
         <!-- Nav Bar Start -->
+
+<!--         
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
                 <a href="{% url 'index' %}" class="navbar-brand">NNEOMA FOUNDATION</a>
@@ -91,11 +100,15 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
+
+
         <!-- Nav Bar End -->
 
 
        <!-- Carousel Start -->
+
+<!-- 
         <div class="carousel">
             <div class="container-fluid">
                 <div class="owl-carousel">
@@ -147,31 +160,40 @@
                 </div>
             </div>
         </div> -
+         -->
 
         <!-- Carousel End --> 
 
 
 
         <!-- Video Modal Start-->
+
+<!-- 
         <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
-                        </button>        
+                        </button>         -->
+
                         <!-- 16:9 aspect ratio -->
-                        <div class="embed-responsive embed-responsive-16by9">
+
+                        <!-- <div class="embed-responsive embed-responsive-16by9">
                             <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>  -->
+
+        
         <!-- Video Modal End -->
         
 
         <!-- About Start -->
+
+<!--         
         <div class="about">
             <div class="container">
                 <div class="row align-items-center">
@@ -222,8 +244,143 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
+        
         <!-- About End -->
+
+        
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active" style="background-image: url(/static/assets/img/slide/health.jpg.jpg);">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Shuffle</span></h2>
+                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item" style="background-image: url(static/assets/img/slide/event-2.jpg);">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
+                <p class="animate__animated animate__fadeInUp">Let us go</p>
+                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item" style="background-image: url(static/assets/img/slide/teaching2.jpg);">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
+                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-double-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-double-right" aria-hidden="true"></span>
+        </a>
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <!-- ======= Header ======= -->
+ 
+  <!-- Nav Bar Start -->
+  <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container-fluid">
+        <a href="{% url 'index' %}" class="navbar-brand">Nneoma</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="navbar-nav ml-auto">
+                <a href="{% url 'index' %}" class="nav-item nav-link">Home</a>
+                <a href="about" class="nav-item nav-link active">About</a>
+                <a href="causes" class="nav-item nav-link">Causes</a>
+                <a href="event" class="nav-item nav-link">Events</a>
+                <a href="blog" class="nav-item nav-link">Blog</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">Programs</a>
+                    <div class="dropdown-menu">
+                        <a href="health" class="dropdown-item">Health</a>
+                        <a href="education" class="dropdown-item">Education</a>
+                        <a href="development" class="dropdown-item">Development</a>
+                        <a href="volunteer" class="dropdown-item">Volunteer</a>
+                    </div>
+                </div>
+                <a href="contact" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Nav Bar End -->
+
+
+
+  <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About Us</h2>
+          Why NNEOMA?
+          NNEOMA Foundation was organized as more than just an name; we built our team with a foundation of peace, 
+          love, and service. After our initial experience in Africa, we knew NNEOMA was organized for a reason. 
+          Our mission is to help residents of who are underprivilege succeed and lead better, more productive lives. 
+          We want youth to grow up fulfilled, happy, and successful, the things that children in developed nations take for granted. 
+          This is a simple goal but often in Africa the outcome is very different. We want their parents to be free from worry,
+          hunger and disease. There is no quick fix and it doesn’t go away with short-term accomplishments. 
+          It is an ongoing process as we try to conquer challenges that developed over decades and requires a continual commitment of financial and emotional support. 
+          NNEOMA is that movement. If you have a strong calling to give back to others less fortunate, you are on the right website. 
+          We can use your help. We began helping residents across Africa in 2016, and we’ve been very successful. 
+          We can do more, but we need assistance. Check out our three missions and take the next steps to assist our organization in funding additional trips around the world. 
+          Donating to worthy causes makes you feel better, and it allows us to do good deeds. Join us let’s make history for Africa and its people.
+
+        <div class="row">
+          <div class="col-lg-6 mt-4">
+            <img src="{% static 'assets/img/about.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content mt-4">
+            <h3>Voluptatem dignissimos <strong>provident quasi corporis voluptates</strong></h3>
+            <p class="fst-italic">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+            <p>
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
 
 
         <!-- Service Start -->
@@ -872,6 +1029,17 @@
         <script  src="{% static 'assets/lib/counterup/counterup.min.js'%}"></script>
         <script  src="{% static 'assets/lib/parallax/parallax.min.js'%}"></script>
 
+        <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js'%}"></script>
+        <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+        <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js'%}"></script>
+        <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js'%}"></script>
+        <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js'%}"></script>
+        <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js'%}"></script>
+        <script src="{% static 'assets/vendor/php-email-form/validate.js'%}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js'%}"></script>
+
 
         <!-- Contact Javascript File -->
         <script src="{% static 'assets/mail/jqBootstrapValidation.min.js'%}"></script>
@@ -879,13 +1047,14 @@
        
 
         <!-- Template Javascript -->
-        <script src="{% static 'assets/js/main.js' %}"></script>
+
+        <!-- <script src="{% static 'assets/js/main.js' %}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js" integrity="sha512-/6TZODGjYL7M8qb7P6SflJB/nTGE79ed1RfJk3dfm/Ib6JwCT4+tOfrrseEHhxkIhwG8jCl+io6eaiWLS/UX1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     -->
     
     </body>
