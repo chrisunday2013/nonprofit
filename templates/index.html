@@ -17,10 +17,10 @@
         
         <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="{% static 'assets/lib/flaticon/font/flaticon.css'%}" rel="stylesheet">
+        
+        <!-- <link href="{% static 'assets/lib/flaticon/font/flaticon.css'%}" rel="stylesheet">
         <link href="{% static 'assets/lib/animate/animate.min.css'%}" rel="stylesheet">
-        <link href="{% static 'assets/lib/owlcarousel/assets/owl.carousel.min.css'%}" rel="stylesheet">
+        <link href="{% static 'assets/lib/owlcarousel/assets/owl.carousel.min.css'%}" rel="stylesheet"> --> 
 
         <link href="{% static 'assets/vendor/animate.css/animate.min.css'%}" rel="stylesheet">
         <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
@@ -31,7 +31,7 @@
       
 
         <link href="{% static 'assets/css/style.css'%}" rel="stylesheet">
-        <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
+        
     </head>
 
     <body>
@@ -106,12 +106,11 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <div class="navbar-nav ml-auto">
                 <a href="{% url 'index' %}" class="nav-item nav-link">Home</a>
-                <a href="about" class="nav-item nav-link active">About</a>
-                <a href="causes" class="nav-item nav-link">Causes</a>
-                <a href="event" class="nav-item nav-link">Events</a>
-                <a href="blog" class="nav-item nav-link">Blog</a>
+                <a href="about" class="nav-item nav-link active">ABOUT</a>
+                <a href="causes" class="nav-item nav-link">WHERE WE WORK</a>
+                <!-- <a href="blog" class="nav-item nav-link">Blog</a> -->
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">Programs</a>
+                    <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">WHAT WE DO</a>
                     <div class="dropdown-menu">
                         <a href="health" class="dropdown-item">Health</a>
                         <a href="education" class="dropdown-item">Education</a>
@@ -119,8 +118,10 @@
                         <a href="volunteer" class="dropdown-item">Volunteer</a>
                     </div>
                 </div>
-                <a href="contact" class="nav-item nav-link">Contact</a>
+                <a href="contact" class="nav-item nav-link">CONTACTS</a>
+                <a href="event" class="nav-item nav-link">EVENTS</a>
             </div>
+        </div>
         </div>
     </div>
 </div>
@@ -151,7 +152,7 @@
 
         <div class="row">
           <div class="col-lg-6 mt-4">
-            <img src="{% static 'assets/img/about.jpg' %}" class="img-fluid" alt="">
+            <img src="{% static 'assets/img/longhappy.jpg' %}" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content mt-4">
             <h3>Voluptatem dignissimos <strong>provident quasi corporis voluptates</strong></h3>
@@ -171,84 +172,54 @@
     </section><!-- End About Us Section -->
 
 
-        <!-- Service Start -->
-        <div class="service">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>What We Do?</p>
-                    <h2>We believe that we can save more lifes with you</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-diet"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Healthy Food</h3>
-                                <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-water"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Pure Water</h3>
-                                <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-healthcare"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Health Care</h3>
-                                <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-education"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Primary Education</h3>
-                                <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-home"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Residence Facilities</h3>
-                                <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-social-care"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Social Care</h3>
-                                <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+         <!-- ======= Our Services Section ======= -->
+
+    <div class="section-header text-center">
+        <p>What We Do?</p>
+        <h2>We believe that we can save more lifes with you</h2>
+    </div>     
+
+    <section id="services" class="services">
+        <div class="container">
+  
+          <div class="row">
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                <h4 class="title"><a href="">Economic Wellbeing</a></h4>
+                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              </div>
             </div>
+  
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-file"></i></div>
+                <h4 class="title"><a href="">Education</a></h4>
+                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+              </div>
+            </div>
+  
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-tachometer"></i></div>
+                <h4 class="title"><a href="">Health</a></h4>
+                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              </div>
+            </div>
+  
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-world"></i></div>
+                <h4 class="title"><a href="">Development</a></h4>
+                <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+              </div>
+            </div>
+  
+          </div>
+  
         </div>
-        <!-- Service End -->
+      </section><!-- End Our Services Section -->
+  
 
 
        
@@ -755,12 +726,12 @@
 
         <!-- JavaScript Libraries -->
         <script  src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script  src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script  src="{% static 'assets/lib/easing/easing.min.js'%}"></script>
+        <!-- <script  src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script> 
+        <script  src="{% static 'assets/lib/easing/easing.min.js'%}"></script> 
         <script  src="{% static 'assets/lib/owlcarousel/owl.carousel.min.js'%}"></script>
         <script  src="{% static 'assets/lib/waypoints/waypoints.min.js'%}"></script>
         <script  src="{% static 'assets/lib/counterup/counterup.min.js'%}"></script>
-        <script  src="{% static 'assets/lib/parallax/parallax.min.js'%}"></script>
+        <script  src="{% static 'assets/lib/parallax/parallax.min.js'%}"></script>  -->
 
         <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js'%}"></script>
         <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
@@ -777,7 +748,7 @@
         <!-- Contact Javascript File -->
         <script src="{% static 'assets/mail/jqBootstrapValidation.min.js'%}"></script>
         <script src="{% static 'assets/mail/contact.js'%}"></script>
-       
+        -->
 
         <!-- Template Javascript -->
     

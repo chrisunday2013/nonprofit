@@ -68,12 +68,11 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
                         <a href="{% url 'index' %}" class="nav-item nav-link">Home</a>
-                        <a href="about" class="nav-item nav-link active">About</a>
-                        <a href="causes" class="nav-item nav-link">Causes</a>
-                        <a href="event" class="nav-item nav-link">Events</a>
-                        <a href="blog" class="nav-item nav-link">Blog</a>
+                        <a href="about" class="nav-item nav-link active">ABOUT</a>
+                        <a href="causes" class="nav-item nav-link">WHERE WE WORK</a>
+                        <!-- <a href="blog" class="nav-item nav-link">Blog</a> -->
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">Programs</a>
+                            <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">WHAT WE DO</a>
                             <div class="dropdown-menu">
                                 <a href="health" class="dropdown-item">Health</a>
                                 <a href="education" class="dropdown-item">Education</a>
@@ -81,8 +80,10 @@
                                 <a href="volunteer" class="dropdown-item">Volunteer</a>
                             </div>
                         </div>
-                        <a href="contact" class="nav-item nav-link">Contact</a>
+                        <a href="contact" class="nav-item nav-link">CONTACTS</a>
+                        <a href="event" class="nav-item nav-link">EVENTS</a>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -109,10 +110,26 @@
         <!-- About Start -->
         <div class="about">
             <div class="container">
+                <div class="section-header">
+                    <p>Learn About Us</p>
+                    <h4>Nneoma, Health, Education And Development opportunities Foundation</h4>
+                </div>
                 <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="about-img" data-parallax="scroll" data-image-src="{% static 'assets/img/about.jpg' %}"></div>
-                    </div>
+                    <div class="col-lg-6 mt-4">
+                        <img src="{% static 'assets/img/about.jpg' %}" class="img-fluid" alt="">
+                      </div>
+                      <div class="col-lg-6 pt-4 pt-lg-0 content mt-4">
+                        <h3>Voluptatem dignissimos <strong>provident quasi corporis voluptates</strong></h3>
+                        <p class="fst-italic">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                          magna aliqua.
+                        </p>
+                        <p>
+                          Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                        </p>
+            
+                      </div>
                     <div class="col-lg-6">
                         <div class="section-header">
                             <p>Learn About Us</p>
@@ -131,7 +148,7 @@
                                 </li>
                             </ul>
 
-                            <div class="tab-content">
+                            <div class="tab-content col-lg-6">
                                 <div id="tab-content-1" class="container tab-pane active">
                                     Why NNEOMA?
                                     NNEOMA Foundation was organized as more than just an name; we built our team with a foundation of peace, 
