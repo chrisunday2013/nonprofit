@@ -231,10 +231,197 @@ a:focus {
 }
 
 
+
+/**********************************/
+/********** Top Bar CSS ***********/
+/**********************************/
+.top-bar {
+    position: absolute;
+    height: 45px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.top-bar .top-bar-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.top-bar .top-bar-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.top-bar .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 45px;
+    padding: 0 10px;
+    text-align: center;
+    border-left: 1px solid rgba(255, 255, 255, .3);
+}
+
+.top-bar .text:last-child {
+    border-right: 1px solid rgba(255, 255, 255, .3);
+}
+
+.top-bar .text i {
+    font-size: 16px;
+    color: #FDBE33;
+    margin-right: 5px;
+}
+
+.top-bar .text p {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.top-bar .social {
+    display: flex;
+    height: 45px;
+    font-size: 0;
+    justify-content: flex-end;
+}
+
+.top-bar .social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 100%;
+    font-size: 16px;
+    color: #FDBE33;
+    border-right: 1px solid rgba(255, 255, 255, .3);
+}
+
+.top-bar .social a:first-child {
+    border-left: 1px solid rgba(255, 255, 255, .3);
+}
+
+.top-bar .social a:hover {
+    color: #ffffff;
+    background: #FDBE33;
+}
+
+@media (min-width: 992px) {
+    .top-bar {
+        padding: 0 60px;
+    }
+}
+
+
+/**********************************/
+/*********** Nav Bar CSS **********/
+/**********************************/
+.navbar {
+    position: relative;
+    transition: .5s;
+    z-index: 999;
+}
+
+.navbar.nav-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    transition: .5s;
+}
+
+.navbar .navbar-brand {
+    margin: 0;
+    color: #ffffff;
+    font-size: 45px;
+    line-height: 0px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.navbar .navbar-brand img {
+    max-width: 100%;
+    max-height: 40px;
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    padding: 10px 15px 8px 15px;
+    color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #FDBE33;
+    transition: none;
+}
+
+.navbar .dropdown-menu {
+    margin-top: 0;
+    border: 0;
+    border-radius: 0;
+    background: #f8f9fa;
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        position: absolute;
+        width: 100%;
+        top: 45px;
+        padding: 20px 60px;
+        background: transparent !important;
+        border-bottom: 1px solid rgba(255, 255, 255, .3);
+        z-index: 9;
+    }
+    
+    .navbar.nav-sticky {
+        padding: 10px 60px;
+        background: #20212B !important;
+        border-bottom: none;
+    }
+    
+    .page .navbar {
+        background: #20212B !important;
+    }
+    
+    .navbar a.nav-link {
+        padding: 8px 15px;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 991.98px) {   
+    .navbar {
+        padding: 15px;
+        background: #20212B !important;
+    }
+    
+    .navbar a.nav-link {
+        padding: 5px;
+    }
+    
+    .navbar .dropdown-menu {
+        box-shadow: none;
+    }
+}
+
+
+
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-#header {
+/* #header {
     height: 70px;
     z-index: 997;
     transition: all 0.5s;
@@ -267,13 +454,14 @@ a:focus {
   .scrolled-offset {
     margin-top: 70px;
   }
-  
+   */
   /*--------------------------------------------------------------
   # Navigation Menu
   --------------------------------------------------------------*/
   /**
   * Desktop Navigation 
   */
+/*   
   .navbar {
     padding: 0;
   }
@@ -345,7 +533,7 @@ a:focus {
     z-index: 99;
     opacity: 0;
     visibility: hidden;
-    /* background: #fff; */
+    background: #fff;
     box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
     transition: 0.3s;
   }
@@ -399,11 +587,11 @@ a:focus {
       left: -100%;
     }
   }
-  
+   */
   /**
   * Mobile Navigation 
   */
-  .mobile-nav-toggle {
+  /* .mobile-nav-toggle {
     color: #58716d;
     font-size: 28px;
     cursor: pointer;
@@ -508,7 +696,8 @@ a:focus {
   .navbar-mobile .dropdown>.dropdown-active {
     display: block;
   }
-  
+   */
+
   /*--------------------------------------------------------------
   # Hero Section
   --------------------------------------------------------------*/
@@ -637,8 +826,8 @@ a:focus {
   }
   
   #hero .btn-get-started:hover {
-    background: #FDBE33;
-    color: black;
+    /* background: #FDBE33; */
+    color: #fff;
     text-decoration: none;
   }
   
@@ -666,6 +855,7 @@ a:focus {
 /**********************************/
 /*********** Nav Bar CSS **********/
 /**********************************/
+/* 
 .navbar {
     position: relative;
     transition: .5s;
@@ -683,9 +873,9 @@ a:focus {
 .navbar .navbar-brand {
     margin: 0;
     color: #ffffff;
-    font-size: 25px;
+    font-size: 45px;
     line-height: 0px;
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: 5px;
     text-transform: uppercase;
 }
@@ -705,7 +895,7 @@ a:focus {
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    color:  #FDBE33;
+    color: #FDBE33;
     transition: none;
 }
 
@@ -713,7 +903,7 @@ a:focus {
     margin-top: 0;
     border: 0;
     border-radius: 0;
-    background: #FDBE33
+    background: #f8f9fa;
 }
 
 @media (min-width: 992px) {
@@ -722,20 +912,20 @@ a:focus {
         width: 100%;
         top: 45px;
         padding: 20px 60px;
-        background: #FDBE33 !important;
+        background: transparent !important;
         border-bottom: 1px solid rgba(255, 255, 255, .3);
         z-index: 9;
     }
-     
+    
     .navbar.nav-sticky {
         padding: 10px 60px;
         background: #20212B !important;
         border-bottom: none;
-    } */
+    }
     
-     .page .navbar {
+    .page .navbar {
         background: #20212B !important;
-    } 
+    }
     
     .navbar a.nav-link {
         padding: 8px 15px;
@@ -758,6 +948,7 @@ a:focus {
         box-shadow: none;
     }
 }
+ */
 
 
 /*******************************/
