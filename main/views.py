@@ -53,6 +53,13 @@ def event(request):
 
 
 @requires_csrf_token
+def economic(request):
+
+
+    return render(request, 'economic.html' )    
+
+
+@requires_csrf_token
 def service(request):
 
 
@@ -92,5 +99,51 @@ def development(request):
 
 
     return render(request, 'development.html' )
+
+
+
+@requires_csrf_token
+def asia(request):
+
+
+    return render(request, 'asia.html' )
+
+
+
+@requires_csrf_token
+def africa(request):
+
+
+    return render(request, 'africa.html' )
+
+
+@requires_csrf_token
+def america(request):
+
+
+    return render(request, 'america.html' )
+
+
+@requires_csrf_token
+def latin(request):
+
+
+    return render(request, 'latin.html' )
+
+
+@requires_csrf_token
+def middle(request):
+
+
+    return render(request, 'middle.html' )
+
+
+
+@requires_csrf_token
+def europe(request):
+
+
+    return render(request, 'europe.html' )
+
 
 

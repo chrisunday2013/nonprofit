@@ -1150,7 +1150,7 @@ a:focus {
 /*******************************/
 
  .page-header {
-    position: relative;
+    /* position: relative;
     margin-bottom: 45px;
     padding: 210px 0 90px 0;
     text-align: center;
@@ -1158,7 +1158,12 @@ a:focus {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;  */
+   
+    background: url(../img/kids_running_small.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden; 
     
 }
 
@@ -1743,7 +1748,7 @@ a:focus {
 
 .team .team-item {
     position: relative;
-    margin-bottom: 35px;
+    margin-bottom: 10px;
 }
 
 .team .team-img {
@@ -1765,10 +1770,10 @@ a:focus {
 .team .team-text {
     position: absolute;
     width: calc(100% - 40px);
-    height: 96px;
+    height: 40px;
     bottom: 0;
     left: 20px;
-    padding: 22px 0;
+    padding: 10px 0;
     text-align: center;
     background: #ffffff;
     transition: .3s;
