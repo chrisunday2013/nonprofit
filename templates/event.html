@@ -67,21 +67,31 @@
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
-                        <a href="{% url 'index' %}" class="nav-item nav-link">Home</a>
+                        <a href="{% url 'index' %}" class="nav-item nav-link">HOME</a>
                         <a href="about" class="nav-item nav-link ">ABOUT</a>
-                        <a href="causes" class="nav-item nav-link">WHERE WE WORK</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">WHERE WE WORK</a>
+                            <div class="dropdown-menu bg-warning">
+                                <a href="africa" class="dropdown-item">Africa</a>
+                                <a href="asia" class="dropdown-item">Asia</a>
+                                <a href="europe" class="dropdown-item">Europe</a>
+                                <a href="latin" class="dropdown-item">Latin America</a>
+                                <a href="middle" class="dropdown-item">Middle East </a>
+                                <a href="america" class="dropdown-item">United States</a>
+                            </div>
+                        </div>
                         <!-- <a href="blog" class="nav-item nav-link">Blog</a> -->
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">WHAT WE DO</a>
                             <div class="dropdown-menu bg-warning text-dark pr-3">
+                                <a href="economic" class="dropdown-item">Economic wellbeing</a>
                                 <a href="health" class="dropdown-item">Health</a>
                                 <a href="education" class="dropdown-item">Education</a>
                                 <a href="development" class="dropdown-item">Development</a>
-                                <a href="volunteer" class="dropdown-item">Volunteer</a>
                             </div>
                         </div>
                         <a href="contact" class="nav-item nav-link">CONTACTS</a>
-                        <a href="event" class="nav-item nav-link active">EVENTS</a>
+                        <a href="event" class="nav-item nav-link">EVENTS</a>
                     </div>
                 </div>
             </div>
@@ -97,7 +107,7 @@
                         <!-- <h2>About Us</h2> -->
                     </div>
                     <div class="col-12">
-                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                         
                         
                         <!-- <a href="{% url 'index' %}">Home</a>
