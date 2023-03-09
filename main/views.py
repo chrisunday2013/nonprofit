@@ -46,11 +46,31 @@ def blog(request):
     return render(request, 'blog.html' )
 
 
+# @requires_csrf_token
+# def contact(request):
+
+
+#     return render(request, 'contact.html' )
+
+
+
+
 @requires_csrf_token
 def contact(request):
+    
+    n=''
+    if  request.method == "POST":
+        full_name= request.POST.get('full_name')
+        email= request.POST.get('email')
+        subject= request.POST.get('subject')
+        message= request.POST.get('message')   
+        contact = Contact(full_name=full_name, email=email, subject=subject, message=message)
+        contact.save()
+        n='Data Sent Successfully'
+        redirect(index)
 
 
-    return render(request, 'contact.html' )
+    return render(request, 'contact.html'  )
 
 
 @requires_csrf_token
