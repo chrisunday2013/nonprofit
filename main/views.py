@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, HttpRequest
 from django.contrib.auth.models import User, auth 
+from .models import Contact, Testimonial, Volunteer, Team
 from datetime import datetime
 from django.conf import settings
 import uuid 
@@ -12,6 +13,20 @@ from django.views.decorators.csrf import csrf_protect,  csrf_exempt, requires_cs
 
 @requires_csrf_token
 def index(request):
+    
+    n=''
+    if  request.method == "POST":
+        full_name= request.POST.get('full_name')
+        email= request.POST.get('email')
+        subject= request.POST.get('subject')
+        message= request.POST.get('message')   
+        contact = Contact(full_name=full_name, email=email, subject=subject, message=message)
+        contact.save()
+        n='Data Sent Successfully'
+        redirect(index)
+    testimonials=Testimonial.objects.all()
+    volunteer=Volunteer.objects.all()
+    teams=Team.objects.all()
 
 
     return render(request, 'index.html' )

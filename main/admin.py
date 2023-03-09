@@ -1,9 +1,10 @@
 from django.contrib import admin
-from .models import Counter
-# Register your models here.
+from . import models 
 
 
 
-class CounterAdmin(admin.ModelAdmin):
-    list_display=('countries', 'volunteers', 'our_goal', 'raised' )
-admin.site.register(Counter, CounterAdmin)
+admin.site.register(models.Contact)
+admin.site.register(models.Volunteer)
+admin.site.register(models.Testimonial)
+admin.site.register(models.Events)
+admin.site.register(models.Team)
