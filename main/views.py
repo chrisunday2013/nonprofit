@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, HttpRequest
 from django.contrib.auth.models import User, auth 
-from .models import Contact, Testimonial, Volunteer, Team
+from .models import Contact, Testimonial, Volunteer, Events
 from datetime import datetime
 from django.conf import settings
 import uuid 
@@ -26,10 +26,9 @@ def index(request):
         redirect(index)
     testimonials=Testimonial.objects.all()
     volunteer=Volunteer.objects.all()
-    teams=Team.objects.all()
 
-
-    return render(request, 'index.html' )
+    events=Events.objects.all()
+    return render(request, 'index.html', {"events": events})
 
 
 @requires_csrf_token
@@ -44,14 +43,6 @@ def blog(request):
 
 
     return render(request, 'blog.html' )
-
-
-# @requires_csrf_token
-# def contact(request):
-
-
-#     return render(request, 'contact.html' )
-
 
 
 
@@ -69,7 +60,7 @@ def contact(request):
         n='Data Sent Successfully'
         redirect(index)
 
-
+    
     return render(request, 'contact.html'  )
 
 
@@ -83,8 +74,8 @@ def causes(request):
 @requires_csrf_token
 def event(request):
 
-
-    return render(request, 'event.html' )
+    events=Events.objects.all()
+    return render(request, 'event.html', {"events": events} )
 
 
 @requires_csrf_token

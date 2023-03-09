@@ -242,44 +242,25 @@
                     <h2>Be ready for our upcoming charity events</h2>
                 </div>
                 <div class="row">
+                    {% for event in events %}
                     <div class="col-lg-6">
                         <div class="event-item">
-                            <img src="{% static 'assets/img/happykids.jpg' %}" alt="Image">
+                            <img src="{{event.image.url}}" alt="Image">
                             <div class="event-content">
                                 <div class="event-meta">
-                                    <p><i class="fa fa-calendar-alt"></i>01-Jan-45</p>
-                                    <p><i class="far fa-clock"></i>8:00 - 10:00</p>
-                                    <p><i class="fa fa-map-marker-alt"></i>New York</p>
+                                    <p><i class="fa fa-calendar-alt"></i> {{event.date}}</p>
+                                    <p><i class="fa fa-map-marker-alt"></i> {{event.venue}}</p>
                                 </div>
                                 <div class="event-text">
-                                    <h3>Lorem ipsum dolor sit</h3>
+                                    <h3>{{event.title}}</h3>
                                     <p>
-                                        Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
+                                        {{event.content}}
                                     </p>
-                                    <a class="btn btn-custom" href="">Join Now</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="event-item">
-                            <img src="{% static 'assets/img/event-2.jpg' %}" alt="Image">
-                            <div class="event-content">
-                                <div class="event-meta">
-                                    <p><i class="fa fa-calendar-alt"></i>01-Jan-45</p>
-                                    <p><i class="far fa-clock"></i>8:00 - 10:00</p>
-                                    <p><i class="fa fa-map-marker-alt"></i>New York</p>
-                                </div>
-                                <div class="event-text">
-                                    <h3>Lorem ipsum dolor sit</h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
-                                    </p>
-                                    <a class="btn btn-custom" href="">Join Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -453,62 +434,6 @@
             </div>
         </div>
         <!-- Contact End -->
-
-
-        <!-- Blog Start -->
-        <!-- <div class="blog">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Our Blog</p>
-                    <h2>Latest news & articles directly from our blog</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <img src="{% static 'assets/img/boy.jpg' %}" alt="Image">
-                            </div>
-                            <div class="blog-text">
-                                <h3><a href="#">Lorem ipsum dolor sit</a></h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
-                                </p>
-                            </div>
-                           
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <img src="{% static 'assets/img/medic.jpg' %}" alt="Image">
-                            </div>
-                            <div class="blog-text">
-                                <h3><a href="#">Lorem ipsum dolor sit</a></h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
-                                </p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <img src="{% static 'assets/img/final.jpg' %}" alt="Image">
-                            </div>
-                            <div class="blog-text">
-                                <h3><a href="#">Lorem ipsum dolor sit</a></h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
-                                </p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
 
 
         <!-- Footer Start -->
