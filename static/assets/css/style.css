@@ -1379,17 +1379,18 @@ a:focus {
     margin: -15px 0 0 0;
 }
 
- .team .team-text {
+.team .team-text {
     position: absolute;
     width: calc(100% - 40px);
     height: 40px;
     bottom: 0;
     left: 20px;
     padding: 10px 0;
+    text-align: center;
     background: #ffffff;
-    
+    transition: .3s;
     overflow: hidden;
-} 
+}
 
 .team .team-text h2 {
     font-size: 18px;
