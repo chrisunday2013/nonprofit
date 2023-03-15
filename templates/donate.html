@@ -67,21 +67,31 @@
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
-                        <a href="{% url 'index' %}" class="nav-item nav-link">Home</a>
-                        <a href="about" class="nav-item nav-link">About</a>
-                        <a href="causes" class="nav-item nav-link">Causes</a>
-                        <a href="event" class="nav-item nav-link">Events</a>
-                        <a href="blog" class="nav-item nav-link">Blog</a>
+                        <a href="{% url 'index' %}" class="nav-item nav-link">HOME</a>
+                        <a href="about" class="nav-item nav-link ">ABOUT</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">Programs</a>
-                            <div class="dropdown-menu">
+                            <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">WHERE WE WORK</a>
+                            <div class="dropdown-menu bg-warning">
+                                <a href="africa" class="dropdown-item">Africa</a>
+                                <a href="asia" class="dropdown-item">Asia</a>
+                                <a href="europe" class="dropdown-item">Europe</a>
+                                <a href="latin" class="dropdown-item">Latin America</a>
+                                <a href="middle" class="dropdown-item">Middle East </a>
+                                <a href="america" class="dropdown-item">United States</a>
+                            </div>
+                        </div>
+                        <!-- <a href="blog" class="nav-item nav-link">Blog</a> -->
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">WHAT WE DO</a>
+                            <div class="dropdown-menu bg-warning text-dark pr-3">
+                                <a href="economic" class="dropdown-item">Economic wellbeing</a>
                                 <a href="health" class="dropdown-item">Health</a>
                                 <a href="education" class="dropdown-item">Education</a>
                                 <a href="development" class="dropdown-item">Development</a>
-                                <a href="volunteer" class="dropdown-item">Volunteer</a>
                             </div>
                         </div>
-                        <a href="contact" class="nav-item nav-link">Contact</a>
+                        <a href="contact" class="nav-item nav-link">CONTACTS</a>
+                        <a href="event" class="nav-item nav-link">EVENTS</a>
                     </div>
                 </div>
             </div>
@@ -108,19 +118,6 @@
         <div class="container">
             <div class="donate" data-parallax="scroll" data-image-src="{% static 'assets/img/donate.jpg' %}">
                 <div class="row align-items-center">
-                    <div class="col-lg-7">
-                        <div class="donate-content">
-                            <div class="section-header">
-                                <p>Donate Now</p>
-                                <h2>Let's donate to needy people for better lives</h2>
-                            </div>
-                            <div class="donate-text">
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non. Aliquam metus tortor, auctor id gravida, viverra quis sem. Curabitur non nisl nec nisi maximus. Aenean convallis porttitor. Aliquam interdum at lacus non blandit.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
                     <div class="col-lg-5">
                         <div class="donate-form">
                             <div class="section-header">
@@ -130,6 +127,20 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-7">
+                        <div class="donate-content">
+                            <div class="section-header">
+                                <p>Donate Now</p>
+                                <h2>No Donation is too small to make an impact</h2>
+                            </div>
+                            <div class="donate-text">
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non. Aliquam metus tortor, auctor id gravida, viverra quis sem. Curabitur non nisl nec nisi maximus. Aenean convallis porttitor. Aliquam interdum at lacus non blandit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -171,7 +182,8 @@
                             <h2>Our Head Office</h2>
                             <p><i class="fa fa-map-marker-alt"></i>Location, City, Country</p>
                             <p><i class="fa fa-phone-alt"></i>+012 345 0000000000</p>
-                            <p><i class="fa fa-envelope"></i>info@example.com</p>
+                            <p><i class="fa fa-envelope"></i>info@nneomafoundation.com</p>
+                            <p><i class="fa fa-envelope"></i>chris.e@nneomafoundation.com</p>
                             <div class="footer-social">
                                 <a class="btn btn-custom" href="https://freewebsitecode.com"><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-custom" href="https://facebook.com/freewebsitecode"><i class="fab fa-facebook-f"></i></a>
