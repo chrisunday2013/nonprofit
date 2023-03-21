@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load crispy_forms_tags %}
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -69,17 +70,7 @@
                     <div class="navbar-nav ml-auto">
                         <a href="{% url 'index' %}" class="nav-item nav-link">HOME</a>
                         <a href="about" class="nav-item nav-link">ABOUT</a>
-                        <!-- <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">WHERE WE WORK</a>
-                            <div class="dropdown-menu bg-warning">
-                                <a href="africa" class="dropdown-item">Africa</a>
-                                <a href="asia" class="dropdown-item">Asia</a>
-                                <a href="europe" class="dropdown-item">Europe</a>
-                                <a href="latin" class="dropdown-item">Latin America</a>
-                                <a href="middle" class="dropdown-item">Middle East </a>
-                                <a href="america" class="dropdown-item">United States</a>
-                            </div>
-                        </div> -->
+                       
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">WHAT WE DO</a>
                             <div class="dropdown-menu bg-warning text-dark pr-3">
@@ -106,14 +97,15 @@
                         <!-- <h2>About Us</h2> -->
                     </div>
                     <div class="col-12">
-                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        <br><br><br><br><br>
+                        <h2 class="text-white">  We can be reached with ease</h2>
                         <div class="carousel-btn">
                             <a class="btn btn-custom text-white" href="donate">Donate Now</a>
                         </div>
-                        
-                        <!-- <a href="{% url 'index' %}">Home</a>
-                        <a href="about">About Us</a> -->
+                        <br><br><br>
+                      
                     </div>
+                    
                 </div>
             </div>
         </div>
