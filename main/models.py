@@ -4,15 +4,16 @@ from django.contrib.auth.models import User
 
 
 # home
-class Counter(models.Model):
-    countries=models.IntegerField()
-    volunteers=models.IntegerField()
-    our_goal=models.IntegerField()
-    raised=models.IntegerField()
+class News_features(models.Model):
+    image = models.ImageField(default="default.jpg", upload_to='portfolio_pics' )
+    title=models.CharField(max_length= 50, null=False )
+    subject=models.CharField(max_length=100, null=True)
+    details=models.TextField(null=True)
+    
 
         
     def __str__(self):
-        return self.countries
+        return self.title
 
 class Events(models.Model):
     title=models.CharField(max_length= 50, null=False )

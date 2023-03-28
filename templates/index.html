@@ -54,7 +54,7 @@
                         </div>
                         <div class="text">
                             <i class="fa fa-envelope"></i>
-                            <p>info@example.com</p>
+                            <p>info@nneomafoundation.com</p>
                         </div>
                     </div>
                 </div>
@@ -76,7 +76,7 @@
     <!-- Nav Bar Start -->
     <div class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container-fluid">
-            <a href="{% url 'index' %}" class="navbar-brand">Nneoma</a>
+            <a href="{% url 'index' %}" class="navbar-brand"> <img src="{% static 'assets/img/logo.jpg' %}"  alt="Team Image"> NNEOMA</a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -204,63 +204,36 @@
         </div>
         <!-- Event End -->
 
-          
-        <!-- Team Start -->
-        <div class="team">
+                
+         <!-- news Start -->
+         <div class="event">
             <div class="container">
                 <div class="section-header text-center">
-                    <h2>News & Features</h2>
+                    <h2 class="text-warning">News & Features</h2>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="{% static 'assets/img/nigerian.jpg' %}" alt="Team Image">
-                            </div>
-                            <div class="team-text text-center">
-                                <h2><a href="blog">Education</a></h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="{% static 'assets/img/teaching2.jpg' %}" alt="Team Image">
-                            </div>
-                            <div class="team-text text-center">
-                                <h2><a href="blog">Scholarships</a></h2>
+                {% for news_feature in news_features %}
+                    <div class="col-lg-6">
+                        <div class="event-item">
+                            <img src="{{news_feature.image.url}}" class="img-fluid" alt="Team Image">
+                            <div class="event-content">
+                                
+                                <div class="event-text">
+                                    <h3>{{news_feature.title}}</h3>
+                                    <p>
+                                        {{news_feature.subject}}
+                                    </p>
+                                    <a class="btn btn-custom" href="">Details</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                   
-                </div>
-
-                <div class="row mt-5">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="{% static 'assets/img/carousel-3.jpg' %}" alt="Team Image">
-                            </div>
-                            <div class="team-text text-center">
-                                <h2><a href="blog">Education</a></h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="{% static 'assets/img/carousel-3.jpg' %}" alt="Team Image">
-                            </div>
-                            <div class="team-text text-center">
-                                <h2><a href="blog">Scholarships</a></h2>
-                            </div>
-                        </div>
-                    </div>
-                   
+                {% endfor %}
                 </div>
             </div>
         </div>
-        <!-- Team End -->
+        <!-- news End -->
+
         
         
         <!-- Volunteer Start -->
@@ -272,13 +245,13 @@
                             <form>
                                 {% csrf_token %}
                                 <div class="control-group">
-                                    <input type="text" class="form-control" placeholder="Name" required="required" />
+                                    <input type="text" class="form-control" name="full_name" id="full_name" placeholder="Name" required="required" />
                                 </div>
                                 <div class="control-group">
-                                    <input type="email" class="form-control" placeholder="Email" required="required" />
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" required="required" />
                                 </div>
                                 <div class="control-group">
-                                    <textarea class="form-control" placeholder="Why you want to become a volunteer?" required="required"></textarea>
+                                    <textarea class="form-control" name="reason_for_joining" id="reason_for_joining" placeholder="Why you want to become a volunteer?" required="required"></textarea>
                                 </div>
                                 <div>
                                     <button class="btn btn-custom" type="submit">Become a volunteer</button>
@@ -354,12 +327,13 @@
                             <h2>Our Head Office</h2>
                             <p><i class="fa fa-map-marker-alt"></i>Location, City, Country</p>
                             <p><i class="fa fa-phone-alt"></i>+012 345 0000000000</p>
-                            <p><i class="fa fa-envelope"></i>info@example.com</p>
+                            <p><i class="fa fa-envelope"></i>info@nneomafoundation.com</p>
+                            <p><i class="fa fa-envelope"></i>chris.e@nneomafoundation.com</p>
                             <div class="footer-social">
-                                <a class="btn btn-custom" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-custom" href="https://twitter.com/NHEDSF"><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-custom" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-custom" href=""><i class="fab fa-youtube"></i></a>
-                                <a class="btn btn-custom" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-custom" href="https://www.instagram.com/nneoma_foundation/"><i class="fab fa-instagram"></i></a>
                                 <a class="btn btn-custom" href=""><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
@@ -369,9 +343,7 @@
                             <h2>Popular Links</h2>
                             <a href="about">About Us</a>
                             <a href="contact">Contact Us</a>
-                            <a href="causes">Popular Causes</a>
                             <a href="event">Upcoming Events</a>
-                            <a href="blog">Latest Blog</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
@@ -379,7 +351,6 @@
                             <h2>Useful Links</h2>
                             <a href="">Terms of use</a>
                             <a href="">Privacy policy</a>
-                            <a href="">Cookies</a>
                             <a href="">Help</a>
                             <a href="">FQAs</a>
                         </div>
@@ -432,7 +403,6 @@
         <!-- Contact Javascript File -->
         <script src="{% static 'assets/mail/jqBootstrapValidation.min.js'%}"></script>
         <script src="{% static 'assets/mail/contact.js'%}"></script>
-        -->
 
         <!-- Template Javascript -->
     

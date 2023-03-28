@@ -347,8 +347,8 @@ a:focus {
 }
 
 .navbar .navbar-brand img {
-    max-width: 100%;
-    max-height: 40px;
+    max-width: 200%;
+    max-height: 100px;
 }
 
 .navbar-dark .navbar-nav .nav-link,
@@ -770,7 +770,7 @@ a:focus {
     margin-bottom: 45px;
     padding: 210px 0 90px 0;
     text-align: center;
-    background: url(../img/penkid.jpg);
+    background: url(../img/brickgirl.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
