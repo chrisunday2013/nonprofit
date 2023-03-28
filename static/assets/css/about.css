@@ -346,9 +346,10 @@ a:focus {
     text-transform: uppercase;
 }
 
+
 .navbar .navbar-brand img {
-    max-width: 100%;
-    max-height: 40px;
+    max-width: 150%;
+    max-height: 80px;
 }
 
 .navbar-dark .navbar-nav .nav-link,
