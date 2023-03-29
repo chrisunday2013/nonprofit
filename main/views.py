@@ -73,32 +73,19 @@ def event(request):
     return render(request, 'event.html', {"events": events} )
 
 
-@requires_csrf_token
-def economic(request):
-
-
-    return render(request, 'economic.html' )    
-
 
 @requires_csrf_token
 def education(request):
 
-
-    return render(request, 'education.html' )
+    news_features=News_features.objects.all()
+    return render(request, 'education.html' , {"news_features": news_features})
 
 
 @requires_csrf_token
 def health(request):
 
-
-    return render(request, 'health.html' )
-
-
-@requires_csrf_token
-def volunteer(request):
-
-
-    return render(request, 'volunteer.html' )
+    news_features=News_features.objects.all()
+    return render(request, 'health.html' , {"news_features": news_features} )
 
 
 @requires_csrf_token
@@ -111,8 +98,8 @@ def donate(request):
 @requires_csrf_token
 def development(request):
 
-
-    return render(request, 'development.html' )
+    news_features=News_features.objects.all()
+    return render(request, 'development.html', {"news_features": news_features} )
 
 
 

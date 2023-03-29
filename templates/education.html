@@ -181,48 +181,34 @@
         </div>
         <!-- Single Post End-->   
 
-  <!-- news Start -->
-  <div class="event">
+   <!-- news Start -->
+   <div class="event">
     <div class="container">
         <div class="section-header text-center">
             <h2 class="text-warning">News & Features</h2>
         </div>
         <div class="row">
+        {% for news_feature in news_features %}
             <div class="col-lg-6">
                 <div class="event-item">
-                    <img src="{% static 'assets/img/girl.jpg' %}" class="img-fluid" alt="Team Image">
+                    <img src="{{news_feature.image.url}}" class="img-fluid" alt="Team Image">
                     <div class="event-content">
                         
                         <div class="event-text">
-                            <h3>Lorem ipsum dolor sit</h3>
+                            <h3>{{news_feature.title}}</h3>
                             <p>
-                                Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
+                                {{news_feature.subject}}
                             </p>
-                            <a class="btn btn-custom" href="">Scholarships</a>
+                            <a class="btn btn-custom" href="">Details</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="event-item">
-                    <img src="{% static 'assets/img/carousel-3.jpg' %}" class="img-fluid" alt="Team Image">
-                    <div class="event-content">
-                        
-                        <div class="event-text">
-                            <h3>Lorem ipsum dolor sit</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
-                            </p>
-                            <a class="btn btn-custom" href="">Loans</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        {% endfor %}
         </div>
     </div>
 </div>
 <!-- news End -->
-
 
 
         <!-- Footer Start -->
