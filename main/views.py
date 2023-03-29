@@ -7,7 +7,7 @@ from django.conf import settings
 import uuid 
 from django.urls import reverse 
 from django.contrib import messages
-from django.views.decorators.csrf import csrf_protect,  csrf_exempt, requires_csrf_token
+from django.views.decorators.csrf import  requires_csrf_token
 
 
 
