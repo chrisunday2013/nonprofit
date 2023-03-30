@@ -21,12 +21,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = ['https://https://web-production-bbd4.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['https://nneomafoundation.org']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'corsheaders', 
     'crispy_forms',
     'main',
     'django.contrib.admin',
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
