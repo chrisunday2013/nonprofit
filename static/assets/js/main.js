@@ -53,21 +53,21 @@
     });
 
     
-    // Main carousel
-    $(".carousel .owl-carousel").owlCarousel({
-        autoplay: true,
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
-        items: 1,
-        smartSpeed: 300,
-        dots: false,
-        loop: true,
-        nav : true,
-        navText : [
-            '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-            '<i class="fa fa-angle-right" aria-hidden="true"></i>'
-        ]
-    });
+    // // Main carousel
+    // $(".carousel .owl-carousel").owlCarousel({
+    //     autoplay: true,
+    //     animateOut: 'fadeOut',
+    //     animateIn: 'fadeIn',
+    //     items: 1,
+    //     smartSpeed: 300,
+    //     dots: false,
+    //     loop: true,
+    //     nav : true,
+    //     navText : [
+    //         '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+    //         '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+    //     ]
+    // });
     
     
     // Modal Video
@@ -89,29 +89,29 @@
     
     
     // Causes carousel
-    $(".causes-carousel").owlCarousel({
-        autoplay: true,
-        animateIn: 'slideInDown',
-        animateOut: 'slideOutDown',
-        items: 1,
-        smartSpeed: 450,
-        dots: false,
-        loop: true,
-        responsive: {
-            0:{
-                items:1
-            },
-            576:{
-                items:1
-            },
-            768:{
-                items:2
-            },
-            992:{
-                items:3
-            }
-        }
-    });
+    // $(".causes-carousel").owlCarousel({
+    //     autoplay: true,
+    //     animateIn: 'slideInDown',
+    //     animateOut: 'slideOutDown',
+    //     items: 1,
+    //     smartSpeed: 450,
+    //     dots: false,
+    //     loop: true,
+    //     responsive: {
+    //         0:{
+    //             items:1
+    //         },
+    //         576:{
+    //             items:1
+    //         },
+    //         768:{
+    //             items:2
+    //         },
+    //         992:{
+    //             items:3
+    //         }
+    //     }
+    // });
     
     
     // Causes progress
