@@ -339,16 +339,16 @@ a:focus {
 .navbar .navbar-brand {
     margin: 0;
     color: #ffffff;
-    font-size: 45px;
+    font-size: 20px;
     line-height: 0px;
     font-weight: 700;
-    letter-spacing: 5px;
+    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 .navbar .navbar-brand img {
-    max-width: 120%;
-    max-height: 60px;
+    max-width: 100%;
+    max-height: 40px;
 }
 
 .navbar-dark .navbar-nav .nav-link,
