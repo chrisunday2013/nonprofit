@@ -61,6 +61,14 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.full_name
+    
+    
+class FAQ(models.Model):
+    question=models.CharField(max_length=300)    
+    answer=models.TextField()
+
+    def __str__(self):
+        return self.question
 
 
 

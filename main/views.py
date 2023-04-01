@@ -42,8 +42,7 @@ def index(request):
 @requires_csrf_token
 def about(request):
 
-
-    return render(request, 'about.html' )
+   return render(request, 'about.html' )
 
 
 
@@ -61,7 +60,6 @@ def contact(request):
         n='Data Sent Successfully'
         redirect(index)
 
-    
     return render(request, 'contact.html'  )
 
 
@@ -91,8 +89,14 @@ def health(request):
 @requires_csrf_token
 def donate(request):
 
+   return render(request, 'donate.html' )
 
-    return render(request, 'donate.html' )
+
+
+@requires_csrf_token
+def faq(request):
+
+   return render(request, 'faq.html' )
 
 
 @requires_csrf_token
