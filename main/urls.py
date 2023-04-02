@@ -13,5 +13,7 @@ urlpatterns = [
     path('about', views.about, name='about'),
     path('health', views.health, name='health'),
     path('faq', views.faq, name='faq'),
+    path('do_policy', views.do_policy, name='do_policy'),
+    path('p_policy', views.p_policy, name='p_policy'),
     path('development', views.development, name='development'),
 ]

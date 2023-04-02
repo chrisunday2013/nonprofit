@@ -100,6 +100,18 @@ def faq(request):
 
 
 @requires_csrf_token
+def do_policy(request):
+
+   return render(request, 'do_policy.html' )
+
+
+@requires_csrf_token
+def p_policy(request):
+
+   return render(request, 'p_policy.html' )
+
+
+@requires_csrf_token
 def development(request):
 
     news_features=News_features.objects.all()
