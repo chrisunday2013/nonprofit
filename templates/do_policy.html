@@ -27,105 +27,44 @@
     </head>
 
     <body>
-        <!-- Top Bar Start -->
-        <div class="top-bar d-none d-md-block">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-8">
-                      <div class="top-bar-left">
-                        <div class="text">
-                            <i class="fa fa-phone-alt"></i>
-                            <p>+2348029632479</p>
-                        </div>
-                        <div class="text">
-                            <i class="fa fa-envelope"></i>
-                            <p>info@nneomafoundation.org</p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="top-bar-right">
-                            <div class="social">
-                                <a href="https://twitter.com/NHEDSF"><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://www.instagram.com/nneoma_foundation/"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Top Bar End -->
-
-        <!-- Nav Bar Start -->
-    <div class="navbar navbar-expand-lg bg-dark navbar-dark">
-      <div class="container-fluid">
-          <a href="{% url 'index' %}" class="navbar-brand"> <img src="{% static 'assets/img/logo.jpg' %}"  alt="Team Image"> NNEOMA FOUNDATION</a>
-          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-              <div class="navbar-nav ml-auto">
-                  <a href="{% url 'index' %}" class="nav-item nav-link active">HOME</a>
-                  <a href="about" class="nav-item nav-link ">ABOUT</a>
-                 
-                  <div class="nav-item dropdown">
-                      <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">WHAT WE DO</a>
-                      <div class="dropdown-menu bg-warning text-dark pr-3">
-                          <a href="health" class="dropdown-item">Health</a>
-                          <a href="education" class="dropdown-item">Education</a>
-                          <a href="development" class="dropdown-item">Development</a>
-                      </div>
-                  </div>
-                  <a href="contact" class="nav-item nav-link">CONTACTS</a>
-                  <a href="event" class="nav-item nav-link">EVENTS</a>
-                  <div class="carousel-btn">
-                      <a class="btn btn-custom text-white bg-danger" href="donate">DONATE NOW</a>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <!-- Nav Bar End -->
-  
-        <!-- Page Header Start -->
-        <div class="page-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <!-- <h2>About Us</h2> -->
-                    </div>
-                    <div class="col-12">
-                        <br><br><br><br><br><br><br><br><br><br><br><br><br>
-                        <div class="carousel-btn">
-                            <a class="btn btn-custom text-white" href="donate">Donate Now</a>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Page Header End -->
-        
+       
  
       <div class="container">
-           Donor Privacy Policy<br>
+
+        <div class="logo mt-5">
+            <a href="{% url 'index' %}" > <img class="logo " src="{% static 'assets/img/logo.jpg' %}"  alt="Team Image"></a>
+        </div>
+        <br>
+        <br>
+        <div class="section-title mt-5" data-aos="zoom-in">
+            <h2 class="text-warning">Donor Privacy Policy </h2>
+            <h3><span></span></h3>
+            <p></p>
+          </div>
+          <br>
+        
           <p>
            
 
             Nneoma Health and Educational Development Support Foundation (NHEDSF) honors and 
-            thank you for your gift to benefit our work. As detailed in our Privacy Policy, 
+            thank you for your gift to benefit our work. As detailed in our <a href="p_policy"><u>Privacy Policy</u></a>, 
             if you choose to make a gift to NHEDSF, we may obtain additional information in 
             connection with your donation, including your payment information. With respect to 
             planned gifts, we also may collect information such as your Social Security Number, 
             which is called National Identification Number (NIN) in Nigeria ( where required by law) 
             and estate documentation.Your personal information will not be shared, leased or sold to other 
             organizations for fundraising purposes, unless you have provided NHEDSF with specific permission 
-            to do so or as otherwise disclosed in our Privacy Policy. 
+            to do so or as otherwise disclosed in our <a href="p_policy"><u>Privacy Policy</u></a>. 
             NHEDSF will not send donor mailings on behalf of other organizations. 
             This commitment applies to information we receive from you both online and offline.
+
+            <br>
+            <br>
+
+            For additional information about our practices for collecting, using, disclosing, and otherwise 
+            managing the information we collect from and about you, as well as the measures we take to protect 
+            personal information and the choices you can make about our use of the information, please see our 
+            <a href="p_policy"><u>Privacy Policy</u></a> or contact us by email at <i>info@nneomafoundation.org</i>.
           </p>
       </div>
     <!-- End F.A.Q Section -->
@@ -163,7 +102,7 @@
                     <div class="col-lg-4 col-md-6">
                       <div class="footer-link">
                         <h2>Useful Links</h2>
-                        <a href="">Terms of use</a>
+                        <a href="terms">Terms of use</a>
                         <a href="p_policy">Privacy policy</a>
                         <a href="do_policy">Donor Privacy policy</a>
                         <a href="">Help</a>

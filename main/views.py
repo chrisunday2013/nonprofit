@@ -112,6 +112,13 @@ def p_policy(request):
 
 
 @requires_csrf_token
+def terms(request):
+
+   return render(request, 'terms.html' )
+
+
+
+@requires_csrf_token
 def development(request):
 
     news_features=News_features.objects.all()
