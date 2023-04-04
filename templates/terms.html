@@ -27,103 +27,161 @@
     </head>
 
     <body>
+         <!-- Top Bar Start -->
+    <div class="top-bar d-none d-md-block">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="top-bar-left">
+                        <div class="text">
+                            <i class="fa fa-phone-alt"></i>
+                            <p>+2348029632479</p>
+                        </div>
+                        <div class="text">
+                            <i class="fa fa-envelope"></i>
+                            <p>info@nneomafoundation.org</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="top-bar-right">
+                        <div class="social">
+                            <a href="https://twitter.com/NHEDSF"><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/nneoma_foundation/"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top Bar End -->
+
+    <!-- Nav Bar Start -->
+    <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a href="{% url 'index' %}" class="navbar-brand"> <img src="{% static 'assets/img/logo.jpg' %}"  alt="Team Image"> NNEOMA FOUNDATION</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto">
+                    <a href="{% url 'index' %}" class="nav-item nav-link active">HOME</a>
+                    <a href="about" class="nav-item nav-link ">ABOUT</a>
+                   
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">WHAT WE DO</a>
+                        <div class="dropdown-menu bg-warning text-dark pr-3">
+                            <a href="health" class="dropdown-item">Health</a>
+                            <a href="education" class="dropdown-item">Education</a>
+                            <a href="development" class="dropdown-item">Development</a>
+                        </div>
+                    </div>
+                    <a href="contact" class="nav-item nav-link">CONTACTS</a>
+                    <a href="event" class="nav-item nav-link">EVENTS</a>
+                    <div class="carousel-btn">
+                        <a class="btn btn-custom text-white bg-danger" href="donate">DONATE NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Nav Bar End -->
         
  
       <div class="container">
-                <div class="logo mt-5">
-                    <a href="{% url 'index' %}" > <img class="logo " src="{% static 'assets/img/logo.jpg' %}"  alt="Team Image"></a>
-                </div>
+                <br>
+                <br>
                 <br>
                 <br>
                  <br>
+                 
                  <div class="section-title mt-5" data-aos="zoom-in">
-                    <h2 class="text-warning">TERMS AND CONDITIONS</h2>
+                    <h1 class="text-warning">TERMS AND CONDITIONS</h1>
                     <h3><span></span></h3>
                     <p></p>
                   </div>
     
-          <p>
+          
                         
                 <br> 
 
-                <h5>Copyright </h5>
+                <h4 class="text-dark">Copyright </h4>
                 
-                This site and its content are protected by copyright and other intellectual property rights. These rights are and will at 
-                times remain owned or combined or controlled by NHEDSF 
-                <br>
-                NHEDSF – Nneoma Health and Educational Development Support Foundation. All rights reserved.
-                <br>
-                The NHEDSF name and logo are registered trademarks. Your access to or use of this site does not entitle you to copy, 
+                <p class="text-dark">This site and its content are protected by copyright and other intellectual property rights. These rights are and will at 
+                times remain owned or combined or controlled by NHEDSF</p> 
+        
+                <p class="text-dark">NHEDSF – Nneoma Health and Educational Development Support Foundation. All rights reserved.</p> 
+                
+                <p class="text-dark">The NHEDSF name and logo are registered trademarks. Your access to or use of this site does not entitle you to copy, 
                 reproduce, modify, disseminate, publish or otherwise exploit the NHEDSF name and logo except with the prior consent of NHEDSF. 
                 Any use of the NHEDSF name and logo without NHEDSF’s prior permission is prohibited. If NHEDSF has approved your use of the NHEDSF 
                 name and logo, such use will be subject to NHEDSF’s standard Terms and Conditions for the Use of the NHEDSF Name and Logo and NHEDSF’s 
-                Guidelines on the Use of the NHEDSF Logo. For more information on the NHEDSF name and logo, please <a href="contact"><u>Contact us</u></a>.
-                <br>
+                Guidelines on the Use of the NHEDSF Logo. For more information on the NHEDSF name and logo, please <a class="text-primary" href="contact">Contact us</a>.</p>
+                
 
-                Some materials on this site are published with the permission of the relevant copyright owners. All rights in such materials are 
-                reserved and you must seek the permission of the copyright owners before you copy any material.
-                <br>
+                <p class="text-dark">Some materials on this site are published with the permission of the relevant copyright owners. All rights in such materials are 
+                reserved and you must seek the permission of the copyright owners before you copy any material.</p>
+                
 
-                If you consider any information on this site infringes the copyright of any person or organization, please <a href="contact"><u>Contact us</u></a>.
-                <br>
-                <br>
-                <h4>Content</h4> 
-                The information contained in this site is provided for general purposes only.
-                <br>
+                <p class="text-dark">If you consider any information on this site infringes the copyright of any person or organization, please <a class="text-primary" href="contact">Contact us</a>.</p>
+                
+                
+                
+                <h4 class="text-dark">Content</h4> 
+                <p>The information contained in this site is provided for general purposes only.</p>
+            
 
-                No reproduction of any part of the site may be sold or distributed for commercial gain nor shall it be modified or incorporated in any other work, 
-                publication or site – whether in hard copy or electronic format – without prior consent from NHEDSF or from the copyright owners.
-                <br>
+                <p class="text-dark">No reproduction of any part of the site may be sold or distributed for commercial gain nor shall it be modified or incorporated in any other work, 
+                publication or site – whether in hard copy or electronic format – without prior consent from NHEDSF or from the copyright owners.</p>
+                
 
-                Content published on this website may be reproduced by way of printing, downloading and distributing, but shall remain at all times for lawful, 
-                non-commercial, informational, educational or personal purposes only.
-                <br>
-                <br>
+                <p class="text-dark">Content published on this website may be reproduced by way of printing, downloading and distributing, but shall remain at all times for lawful, 
+                non-commercial, informational, educational or personal purposes only.</p>
+               
+                <h4 class="text-dark">Limitation of liability </h4>
+                <p class="text-dark">NHEDSF makes no warranty or representation, express or implied, in relation to this site or its content. This site and its content are 
+                provided ‘as is’ and ‘as available’.</p>
+            
 
-                <h4>Limitation of liability </h4>
-                NHEDSF makes no warranty or representation, express or implied, in relation to this site or its content. This site and its content are 
-                provided ‘as is’ and ‘as available’.
-                <br>
-
-                The content of this site is believed to be correct at the time of inclusion. NHEDSF attempts to ensure that the content of this site is 
+                <p class="text-dark">The content of this site is believed to be correct at the time of inclusion. NHEDSF attempts to ensure that the content of this site is 
                 accurate and current. However, content is subject to change and NHEDSF does not guarantee its currency or accuracy. 
-                NHEDSF cannot be held liable for any kind of damages, whether direct or indirect, resulting from use of or reliance on this site or its content.
-                <br>
+                NHEDSF cannot be held liable for any kind of damages, whether direct or indirect, resulting from use of or reliance on this site or its content.</p>
+                
 
-                This site contains links to other independent third-party sites. Links to other sites are provided for information purposes, 
+                <p class="text-dark">This site contains links to other independent third-party sites. Links to other sites are provided for information purposes, 
                 but these third-party sites are not under NHEDSF’s control, responsibility, liability or endorsement and NHEDSF cannot be held 
                 responsible for their content. If you use any third-party sites which this site may contain links to, NHEDSF is not responsible for 
-                and cannot guarantee the privacy practices of such sites.
-                <br>
+                and cannot guarantee the privacy practices of such sites.</p>
+                
 
-                Information provided on this site on other organizations does not mean that these organizations endorse NHEDSF’s positions or activities. 
-                The views expressed by NHEDSF in this site are those of NHEDSF only and do not necessarily reflect the views of NHEDSF’s donors or partners.
-                <br>
+                <p class="text-dark">Information provided on this site on other organizations does not mean that these organizations endorse NHEDSF’s positions or activities. 
+                The views expressed by NHEDSF in this site are those of NHEDSF only and do not necessarily reflect the views of NHEDSF’s donors or partners.</p>
+                
 
-                NHEDSF reserves the right to make changes to these Terms and Conditions. Please refer to this page regularly to review these Terms and 
-                Conditions and any new information.
-                <br>
-                <br>
+                <p class="text-dark">NHEDSF reserves the right to make changes to these Terms and Conditions. Please refer to this page regularly to review these Terms and 
+                Conditions and any new information.</p>
+                
+                
+                <h4 class="text-dark">Privacy notice</h4> 
+                <p>For more information, please read the NHEDSF <a class="text-primary" href="p_policy">Privacy Policy</a>.</p>
+                
+                
+                <h4 class="text-dark">Contact </h4>
+                <p class="text-dark">This website was developed and is maintained by the Communications Department of NHEDSF, NorthStar Garden Estate Abuja.</p>
+                
+                <p class="text-dark">If you have any specific queries or requests, please <a class="text-primary" href="contact">Contact us</a>.</p>
+                
+                
+                <h4 class="text-dark">Jurisdiction and governing law </h4>
+                <p class="text-dark">Access to and use of the NHEDSF website is subject to the Terms and Conditions herein, which are governed by and shall be construed 
+                in accordance with the laws of Nigeria.The parties submit all their disputes arising out of or in connection with these Terms and Conditions 
+                to the exclusive jurisdiction of the High Court of Nigeria.</p>
 
-                <h4>Privacy notice </h4>
-                For more information, please read the NHEDSF <a href="p_policy"><u>Privacy Policy</u></a>.
-                <br>
-                <br>
-
-                <h4>Contact </h4>
-                This website was developed and is maintained by the Communications Department of NHEDSF, NorthStar Garden Estate Abuja.
-                <br>
-
-                If you have any specific queries or requests, please <a href="contact"><u>Contact us</u></a>.
-                <br>
-                <br>
-
-                <h4>Jurisdiction and governing law </h4>
-                Access to and use of the NHEDSF website is subject to the Terms and Conditions herein, which are governed by and shall be construed 
-                in accordance with the laws of Nigeria.The parties submit all their disputes arising out of or in connection with these Terms and Conditions to the exclusive jurisdiction of the High Court of Nigeria.
-
-                This page was last updated on <a>4 January 2023</a>.
-            </p>
+                
+                <p class="text-dark">This page was last updated on <b>4 January 2023</b>.</p>
       </div>
     <!-- End F.A.Q Section -->
   
