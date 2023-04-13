@@ -132,6 +132,11 @@ def p_policy(request):
    return render(request, 'p_policy.html' )
 
 
+@requires_csrf_token
+def cookies(request):
+
+   return render(request, 'cookies.html' )
+
 
 @requires_csrf_token
 def partnership(request):

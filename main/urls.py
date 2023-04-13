@@ -18,6 +18,7 @@ urlpatterns = [
     path('partnership', views.partnership, name='partnership'),
     path('part', views.part, name='part'),
     path('terms', views.terms, name='terms'),
+    path('cookies', views.cookies, name='cookies'),
     path('cause', views.cause, name='cause'),
     path('grant', views.grant, name='grant'),
     path('employ', views.employ, name='employ'),
