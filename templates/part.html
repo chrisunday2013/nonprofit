@@ -9,7 +9,7 @@
         <meta content="Free Website Template" name="description">
 
         <!-- Favicon -->
-        <link href="{% static 'assets/img/favicon.ico' %}" rel="icon">
+        <link href="{% static 'assets/img/favicon.ico'%}" rel="icon">
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,12 +17,12 @@
         <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="{% static 'assets/lib/flaticon/font/flaticon.css' %}" rel="stylesheet">
-        <link href="{% static 'assets/lib/animate/animate.min.css' %}" rel="stylesheet">
-        <link href="{% static 'assets/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+        <link href="{% static 'assets/lib/flaticon/font/flaticon.css'%}" rel="stylesheet">
+        <link href="{% static 'assets/lib/animate/animate.min.css'%}" rel="stylesheet">
+        <link href="{% static 'assets/lib/owlcarousel/assets/owl.carousel.min.css'%}" rel="stylesheet">
 
         <!-- Template Stylesheet -->
-        <link href="{% static 'assets/css/event.css' %}" rel="stylesheet">
+        <link href="{% static 'assets/css/partnaship.css'%}" rel="stylesheet">
     </head>
 
     <body>
@@ -80,7 +80,7 @@
                             </div>
                         </div>
                         <a href="contact" class="nav-item nav-link">CONTACTS</a>
-                        <a href="event" class="nav-item nav-link active">EVENTS</a>
+                        <a href="event" class="nav-item nav-link">EVENTS</a>
                         <div class="carousel-btn">
                             <a class="btn btn-custom text-white bg-danger" href="donate">DONATE NOW</a>
                         </div>
@@ -92,59 +92,74 @@
         
         
         <!-- Page Header Start -->
-        <div class="page-header">
+        <!-- <div class="page-header">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <!-- <h2>About Us</h2> -->
                     </div>
                    
                     <div class="col-12">
                         <br><br><br><br><br>
-                        <h2 class="text-white">  Be a part of this beautiful smile</h2>
+                        <h2 class="text-white">  With education, children are set for better future</h2>
                         <div class="carousel-btn">
-                            <a class="btn btn-custom text-white" href="donate">Donate Now</a>
+                            <a class="btn btn-custom text-white " href="donate">DONATE NOW</a>
                         </div>
-                        <br><br><br><br>
+                        <br><br><br>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Page Header End -->
-        
-        
-        <!-- Event Start -->
-        <div class="event">
+
+
+        <!-- Single Post Start-->
+        <div class="single">
             <div class="container">
-                <div class="section-header text-center">
-                    <p>Upcoming Events</p>
-                    <h2>Be ready for our upcoming charity events</h2>
-                </div>
                 <div class="row">
-                    {% for event in events %}
-                    <div class="col-lg-6">
-                        <div class="event-item">
-                            <img src="{{event.image.url}}" alt="Image">
-                            <div class="event-content">
-                                <div class="event-meta">
-                                    <p><i class="fa fa-calendar-alt"></i> {{event.date}}</p>
-                                    <p><i class="fa fa-map-marker-alt"></i> {{event.venue}}</p>
-                                </div>
-                                <div class="event-text">
-                                    <h3>{{event.title}}</h3>
-                                    <p>
-                                        {{event.content}}
-                                    </p>
-                                </div>
-                            </div>
+                    <div class="col-lg-12">
+                        <div class="single-content">
+                        
+                            <h2 class="text-dark  text-center mt-5">Education</h2>
+
+                            <img class= "mb-4  mt-5 part_img max-width: 100%; and height:auto" src="{% static 'assets/img/penkid.jpg'%}" />
+                            
+                           
                         </div>
+                       
                     </div>
-                    {% endfor %}
-                   
                 </div>
             </div>
         </div>
-        <!-- Event End -->
+        <!-- Single Post End-->   
+
+   <!-- news Start -->
+   <div class="event">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="text-warning">News & Features</h2>
+        </div>
+        <div class="row">
+        {% for news_feature in news_features %}
+            <div class="col-lg-6">
+                <div class="event-item">
+                    <img src="{{news_feature.image.url}}" class="img-fluid" alt="Team Image">
+                    <div class="event-content">
+                        
+                        <div class="event-text">
+                            <h3>{{news_feature.title}}</h3>
+                            <p>
+                                {{news_feature.subject}}
+                            </p>
+                            <a class="btn btn-custom" href="">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- news End -->
 
 
         <!-- Footer Start -->
@@ -213,17 +228,17 @@
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="{% static 'assets/lib/easing/easing.min.js' %}"></script>
-        <script src="{% static 'assets/lib/owlcarousel/owl.carousel.min.js' %}"></script>
-        <script src="{% static 'assets/lib/waypoints/waypoints.min.js' %}"></script>
-        <script src="{% static 'assets/lib/counterup/counterup.min.js' %}"></script>
-        <script src="{% static 'assets/lib/parallax/parallax.min.js' %}"></script>
+        <script src="{% static 'assets/lib/easing/easing.min.js'%}"></script>
+        <script src="{% static 'assets/lib/owlcarousel/owl.carousel.min.js'%}"></script>
+        <script src="{% static 'assets/lib/waypoints/waypoints.min.js'%}"></script>
+        <script src="{% static 'assets/lib/counterup/counterup.min.js'%}"></script>
+        <script src="{% static 'assets/lib/parallax/parallax.min.js'%}"></script>
         
         <!-- Contact Javascript File -->
-        <script src="{% static 'assets/mail/jqBootstrapValidation.min.js' %}"></script>
-        <script src="{% static 'assets/mail/contact.js' %}"></script>
+        <script src="{% static 'assets/mail/jqBootstrapValidation.min.js'%}"></script>
+        <script src="{% static 'assets/mail/contact.js'%}"></script>
 
         <!-- Template Javascript -->
-        <script src="{% static 'assets/js/main.js' %}"></script>
+        <script src="{% static 'assets/js/main.js'%}"></script>
     </body>
 </html>

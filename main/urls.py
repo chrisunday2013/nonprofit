@@ -15,6 +15,11 @@ urlpatterns = [
     path('faq', views.faq, name='faq'),
     path('do_policy', views.do_policy, name='do_policy'),
     path('p_policy', views.p_policy, name='p_policy'),
+    path('partnership', views.partnership, name='partnership'),
+    path('part', views.part, name='part'),
     path('terms', views.terms, name='terms'),
+    path('cause', views.cause, name='cause'),
+    path('grant', views.grant, name='grant'),
+    path('employ', views.employ, name='employ'),
     path('development', views.development, name='development'),
 ]

@@ -2,10 +2,8 @@
 /********* General CSS *********/
 /*******************************/
 body {
-    color: #777777;
     font-weight: 500;
-    background: #ffffff;
-    font-family: 'Quicksand', sans-serif;
+    font-family:Arial, Helvetica, sans-serif
 }
 
 h1,
@@ -14,7 +12,8 @@ h3,
 h4,
 h5, 
 h6 {
-    color: #4a4c70;
+    color: black;
+    font-weight:bolder;
 }
 
 a {

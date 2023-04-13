@@ -2,7 +2,9 @@
 /********* General CSS *********/
 /*******************************/
 body {
-    font-weight: 700;
+    color: #777777;
+    font-weight: 500;
+    background: #ffffff;
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -12,7 +14,7 @@ h3,
 h4,
 h5, 
 h6 {
-    color:black;
+    color: #4a4c70;
 }
 
 a {
@@ -344,6 +346,7 @@ a:focus {
     text-transform: uppercase;
 }
 
+
 .navbar .navbar-brand img {
     max-width: 100%;
     max-height: 40px;
@@ -414,6 +417,7 @@ a:focus {
 }
 
 
+
   /*--------------------------------------------------------------
   # Hero Section
   --------------------------------------------------------------*/
@@ -475,19 +479,301 @@ a:focus {
     color: #fff;
   }
   
+  #hero .carousel-inner .carousel-item {
+    transition-property: opacity;
+    background-position: center top;
+  }
+  
+  #hero .carousel-inner .carousel-item,
+  #hero .carousel-inner .active.carousel-item-start,
+  #hero .carousel-inner .active.carousel-item-end {
+    opacity: 0;
+  }
+  
+  #hero .carousel-inner .active,
+  #hero .carousel-inner .carousel-item-next.carousel-item-start,
+  #hero .carousel-inner .carousel-item-prev.carousel-item-end {
+    opacity: 1;
+    transition: 0.5s;
+  }
+  
+  #hero .carousel-inner .carousel-item-next,
+  #hero .carousel-inner .carousel-item-prev,
+  #hero .carousel-inner .active.carousel-item-start,
+  #hero .carousel-inner .active.carousel-item-end {
+    left: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  #hero .carousel-control-prev,
+  #hero .carousel-control-next {
+    width: 10%;
+  }
+  
+  #hero .carousel-control-next-icon,
+  #hero .carousel-control-prev-icon {
+    background: none;
+    font-size: 48px;
+    line-height: 1;
+    width: auto;
+    height: auto;
+  }
+  
+  #hero .carousel-indicators li {
+    cursor: pointer;
+    opacity: 1;
+  }
+  
+  #hero .carousel-indicators .active {
+    background-color: #FDBE33;
+  }
+  
+  #hero .btn-get-started {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 50px;
+    transition: 0.5s;
+    line-height: 1;
+    margin: 10px;
+    color: #fff;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+    border: 2px solid #FDBE33;
+  }
+  
+  #hero .btn-get-started:hover {
+    /* background: #FDBE33; */
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 768px) {
+    #hero h2 {
+      font-size: 28px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    #hero p {
+      width: 60%;
+    }
+  
+    #hero .carousel-control-prev,
+    #hero .carousel-control-next {
+      width: 5%;
+    }
+  }
+  
+
+
+/*******************************/
+/********** Hero CSS ***********/
+/*******************************/
+
+ .carousel {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    background: #ffffff;
+    margin-bottom: 45px;
+}
+
+.carousel .container-fluid {
+    padding: 0;
+}
+
+.carousel .carousel-item {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.carousel .carousel-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    text-align: right;
+    overflow: hidden;
+}
+
+.carousel .carousel-img::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+     background: rgba(0, 0, 0, .5); 
+    z-index: 1;
+}
+
+.carousel .carousel-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel .carousel-text {
+    position: absolute;
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.carousel .carousel-text h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.carousel .carousel-text p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.carousel .carousel-btn .btn.btn-custom {
+    color: #ffffff;
+}
+
+.carousel .carousel-btn .btn.btn-custom:hover {
+    color: #20212B;
+}
+
+.carousel .carousel-btn .btn:first-child {
+    margin-right: 15px;
+}
+
+.carousel .owl-nav {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    top: calc(50% - 30px);
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 9;
+}
+
+.carousel .owl-nav .owl-prev,
+.carousel .owl-nav .owl-next {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FDBE33;
+    background: rgba(256, 256, 256, .2);
+    font-size: 22px;
+    transition: .3s;
+}
+
+.carousel .owl-nav .owl-prev:hover,
+.carousel .owl-nav .owl-next:hover {
+    color: #ffffff;
+    background: #FDBE33;
+}
+
+.carousel .owl-nav .owl-prev {
+    margin-right: 2px;
+}
+
+.carousel .animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+#videoModal .modal-dialog {
+    position: relative;
+    max-width: 800px;
+    margin: 60px auto 0 auto;
+}
+
+#videoModal .modal-body {
+    position: relative;
+    padding: 0px;
+}
+
+#videoModal .close {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 0px;
+    top: -30px;
+    z-index: 999;
+    font-size: 30px;
+    font-weight: normal;
+    color: #ffffff;
+    background: #000000;
+    opacity: 1;
+}
+
+@media (max-width: 991.98px) {
+    .carousel .carousel-text h1 {
+        font-size: 35px;
+    }
+    
+    .carousel .carousel-text p {
+        font-size: 16px;
+    }
+    
+    .carousel .carousel-text .btn {
+        padding: 12px 30px;
+        font-size: 15px;
+        letter-spacing: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .carousel .carousel-text h1 {
+        font-size: 30px;
+    }
+    
+    .carousel .carousel-text .btn {
+        padding: 10px 25px;
+        font-size: 15px;
+        letter-spacing: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .carousel .carousel-text h1 {
+        font-size: 25px;
+    }
+    
+    .carousel .carousel-text .btn {
+        padding: 8px 20px;
+        font-size: 14px;
+        letter-spacing: 0;
+    }
+} 
 
 
 /*******************************/
 /******* Page Header CSS *******/
-/****************************** */
+/*******************************/
 
  .page-header {
     position: relative;
     margin-bottom: 45px;
     padding: 210px 0 90px 0;
     text-align: center;
-    background: url(../img/frontA.jpg);
-    background-color: grey;
+    background: url(../img/medi2.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -791,6 +1077,90 @@ a:focus {
   } 
 
 
+/*******************************/
+/********* Donate CSS **********/
+/*******************************/
+.donate {
+    position: relative;
+    width: 100%;
+    margin: 45px 0;
+    background: rgba(0, 0, 0, .5);
+}
+
+.donate .donate-content {
+    padding: 45px 0 15px 0;
+}
+
+.container .donate {
+    margin: 90px 0;
+}
+
+.container .donate .donate-content {
+    padding: 45px 30px 15px 30px;
+}
+
+.donate .donate-content .section-header {
+    margin-bottom: 30px;
+}
+
+.donate .donate-content .section-header h2 {
+    color: #ffffff;
+}
+
+.donate .donate-text p {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.donate .donate-form {
+    padding: 90px 30px;
+    background: #FDBE33;
+}
+
+.donate .donate-form .control-group {
+    margin-bottom: 15px;
+}
+
+.donate .donate-form .form-control {
+    height: 60px;
+    color: #ffffff;
+    padding: 0 15px;
+    border-radius: 0;
+    border: 1px solid #ffffff;
+    background: transparent;
+}
+
+.donate .donate-form .form-control::placeholder {
+    color: #ffffff;
+    opacity: 1;
+}
+
+.donate .donate-form .form-control:-ms-input-placeholder,
+.donate .donate-form .form-control::-ms-input-placeholder {
+    color: #ffffff;
+}
+
+.donate .donate-form .btn-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.donate .donate-form .btn.btn-custom {
+    padding: 15px 0;
+    width: 100%;
+    height: 60px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    box-shadow: inset 0 0 0 0 #ffffff;
+}
+
+.donate .donate-form .btn.btn-custom:hover,
+.donate .donate-form .btn.btn-custom.active {
+    color: #FDBE33;
+    border: 1px solid #ffffff;
+    box-shadow: inset 0 0 0 30px #ffffff;
+}
 
 
 
@@ -1063,108 +1433,79 @@ a:focus {
 }
 
 
+/*******************************/
+/******* Testimonial CSS *******/
+/*******************************/
+.testimonial {
+    position: relative;
+    width: 100%;
+    padding: 45px 0;
+}
 
-/*--------------------------------------------------------------
-# Testimonials
---------------------------------------------------------------*/
-.testimonials {
-    padding: 80px 0;
-    background: url(../img/lonely.jpg);
-    background-position: center center;
-    background-size: cover;
+.testimonial .testimonials-carousel {
     position: relative;
-  }
-  
-  .testimonials::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: rgba(2, 2, 2, 0.7);
-  }
-  
-  .testimonials .section-header {
-    margin-bottom: 40px;
-  }
-  
-  .testimonials .testimonials-carousel,
-  .testimonials .testimonials-slider {
+    width: calc(100% + 30px);
+    margin: 0 -15px;
+}
+
+.testimonial .testimonial-item {
+    position: relative;
+    width: 100%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
-  }
-  
-  .testimonials .testimonial-item {
-    text-align: center;
-    color: #fff;
-  }
-  
-  .testimonials .testimonial-item .testimonial-img {
-    width: 100px;
-    border-radius: 50%;
-    border: 6px solid rgba(255, 255, 255, 0.15);
-    margin: 0 auto;
-  }
-  
-  .testimonials .testimonial-item h3 {
+}
+
+.testimonial .testimonial-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.testimonial .testimonial-profile img {
+    width: 80px;
+    margin-bottom: -1px;
+}
+
+.testimonial .testimonial-name {
+    padding-left: 15px;
+    width: calc(100% - 95px);
+}
+
+.testimonial .testimonial-name h3 {
     font-size: 20px;
-    font-weight: bold;
-    margin: 10px 0 5px 0;
-    color: #fff;
-  }
-  
-  .testimonials .testimonial-item h4 {
-    font-size: 14px;
-    color: #ddd;
-    margin: 0 0 15px 0;
-  }
-  
-  .testimonials .testimonial-item .quote-icon-left,
-  .testimonials .testimonial-item .quote-icon-right {
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 26px;
-  }
-  
-  .testimonials .testimonial-item .quote-icon-left {
-    display: inline-block;
-    left: -5px;
-    position: relative;
-  }
-  
-  .testimonials .testimonial-item .quote-icon-right {
-    display: inline-block;
-    right: -5px;
-    position: relative;
-    top: 10px;
-  }
-  
-  .testimonials .testimonial-item p {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.testimonial .testimonial-name p {
+    margin: 0;
     font-style: italic;
-    margin: 0 auto 15px auto;
-    color: #eee;
-  }
-  
-  .testimonials .swiper-pagination {
-    margin-top: 20px;
-    position: relative;
-  }
-  
-  .testimonials .swiper-pagination .swiper-pagination-bullet {
+}
+
+.testimonial .testimonial-text p {
+    margin: 0;
+}
+
+.testimonial .owl-dots {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.testimonial .owl-dot {
+    display: inline-block;
+    margin: 0 5px;
     width: 12px;
     height: 12px;
-    background-color: rgba(255, 255, 255, 0.5);
-    opacity: 1;
-  }
-  
-  .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: #8fc04e;
-  }
-  
-  @media (min-width: 992px) {
-    .testimonials .testimonial-item p {
-      width: 80%;
-    }
-  }
+    border-radius: 0;
+    background: #FDBE33;
+}
+
+.testimonial .owl-dot.active {
+    background: #20212B;
+}
 
 
 /*******************************/
@@ -1174,7 +1515,7 @@ a:focus {
     position: relative;
     width: 100%;
     margin: 45px 0;
-    background: rgba(0, 0, 0, .7);
+    background: rgba(0, 0, 0, .5);
 }
 
 .volunteer .volunteer-content {
@@ -1883,95 +2224,6 @@ a:focus {
 
 
 /*******************************/
-/********* Donate CSS **********/
-/*******************************/
-
-.donate {
-    position: relative;
-    width: 100%;
-    margin: 45px 0;
-    background: rgba(0, 0, 0, .5);
-}
-
-.donate .donate-content {
-    padding: 45px 0 15px 0;
-}
-
-.container .donate {
-    margin: 90px 0;
-}
-
-.container .donate .donate-content {
-    padding: 45px 30px 15px 30px;
-}
-
-.donate .donate-content .section-header {
-    margin-bottom: 30px;
-}
-
-.donate .donate-content .section-header h2 {
-    color: #ffffff;
-}
-
-.donate .donate-text p {
-    color: #ffffff;
-    font-size: 18px;
-}
-
-.donate .donate-form {
-    padding: 90px 30px;
-    background: #FDBE33;
-}
-
-.donate .donate-form .control-group {
-    margin-bottom: 15px;
-}
-
-.donate .donate-form .form-control {
-    height: 60px;
-    color: #ffffff;
-    padding: 0 15px;
-    border-radius: 0;
-    border: 1px solid #ffffff;
-    background: transparent;
-}
-
-.donate .donate-form .form-control::placeholder {
-    color: #ffffff;
-    opacity: 1;
-}
-
-.donate .donate-form .form-control:-ms-input-placeholder,
-.donate .donate-form .form-control::-ms-input-placeholder {
-    color: #ffffff;
-}
-
-.donate .donate-form .btn-group {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-}
-
-.donate .donate-form .btn.btn-custom {
-    padding: 15px 0;
-    width: 100%;
-    height: 60px;
-    color: #ffffff;
-    border: 1px solid #ffffff;
-    box-shadow: inset 0 0 0 0 #ffffff;
-}
-
-.donate .donate-form .btn.btn-custom:hover,
-.donate .donate-form .btn.btn-custom.active {
-    color: #FDBE33;
-    border: 1px solid #ffffff;
-    box-shadow: inset 0 0 0 30px #ffffff;
-}
-
-
-
-
-/*******************************/
 /********* Footer CSS **********/
 /*******************************/
 .footer {
@@ -2095,96 +2347,3 @@ a:focus {
         text-align: center;
     }
 }
-
-
-
-/*--------------------------------------------------------------
-# F.A.Q
---------------------------------------------------------------*/
-.faq {
-    background: #f5faf0;
-  }
-  
-  .faq .section-title h2 {
-    background: #e9f3dd;
-  }
-  
-  .faq .faq-list {
-    padding: 0 100px;
-  }
-  
-  .faq .faq-list ul {
-    padding: 0;
-    list-style: none;
-  }
-  
-  .faq .faq-list li+li {
-    margin-top: 15px;
-  }
-  
-  .faq .faq-list li {
-    padding: 20px;
-    background: #fff;
-    border-radius: 4px;
-    position: relative;
-  }
-  
-  .faq .faq-list a {
-    display: block;
-    position: relative;
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 500;
-    padding: 0 30px;
-    outline: none;
-    cursor: pointer;
-  }
-  
-  .faq .faq-list .icon-help {
-    font-size: 24px;
-    position: absolute;
-    right: 0;
-    left: 20px;
-    color: #cbe1ac;
-  }
-  
-  .faq .faq-list .icon-show,
-  .faq .faq-list .icon-close {
-    font-size: 24px;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  
-  .faq .faq-list p {
-    margin-bottom: 0;
-    padding: 10px 0 0 0;
-  }
-  
-  .faq .faq-list .icon-show {
-    display: none;
-  }
-  
-  .faq .faq-list a.collapsed {
-    color: #343a40;
-  }
-  
-  .faq .faq-list a.collapsed:hover {
-    color: #8fc04e;
-  }
-  
-  .faq .faq-list a.collapsed .icon-show {
-    display: inline-block;
-  }
-  
-  .faq .faq-list a.collapsed .icon-close {
-    display: none;
-  }
-  
-  @media (max-width: 1200px) {
-    .faq .faq-list {
-      padding: 0;
-    }
-  }
-  

@@ -449,3 +449,27 @@
   
   })()
 
+
+  const form = document.querySelector('#donation-form');
+form.addEventListener('submit', (event) => {
+  // Stop the form from submitting
+  event.preventDefault();
+  
+  // Get the form data
+  const amount = form.querySelector('#amount').value;
+  const name = form.querySelector('#name').value;
+  const email = form.querySelector('#email').value;
+  const message = form.querySelector('#message').value;
+  const payment = form.querySelector('#payment').value;
+  
+  // Construct the payment URL with the form data
+  if (payment === 'paypal') {
+    const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YOUR_PAYPAL_EMAIL_ADDRESS&currency_code=USD&no_note=1&amount=${amount}&item_name=${name}&email=${email}&message=${message}&return=https://www.example.com/thankyou.html`;
+    window.location.href = paypalUrl; // Redirect to PayPal
+  } else if (payment === 'paystack') {
+    const paystackUrl = `https://paystack.com/pay/YOUR_PAYSTACK_PAYMENT_CODE?amount=${amount}&email=${email}&metadata={"name":"${name}","message":"${message}"}&callback_url=https://www.example.com/thankyou.html`;
+    window.location.href = paystackUrl; // Redirect to Paystack
+  }
+});
+
+
