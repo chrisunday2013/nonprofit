@@ -62,35 +62,7 @@ class Contact(models.Model):
     message=models.TextField(null=True)
 
     def __str__(self):
-        return self.full_name
-    
-
-
-   
-
-
-class Donate(models.Model):
-    PAYMENT_CHOICES = [
-        ('paypal', 'PayPal'),
-        ('payStack', 'PayStack'),
-    ]
-
-    AMOUNT_CHOICES = [
-        ('25', '25'),
-        ('50', '50'),
-        ('75', '75'),
-        ('100', '100'),
-    ]
-
-    amount=models.CharField(max_length=100, choices=AMOUNT_CHOICES, default='25')
-    full_name=models.CharField(max_length=100, null=True)
-    email=models.EmailField(max_length=100, null=True)
-    message=models.TextField(null=True)
-    payment=models.CharField(max_length=100, choices=PAYMENT_CHOICES, default='paypal')
-    
-
-    def __str__(self):
-        return self.amount    
+        return self.full_name    
     
     
 class FAQ(models.Model):
