@@ -29,33 +29,42 @@
         <title>Document</title>
 </head>
 <body>
-     <div class="container">
-           <div class="d-flex row justify-content-center align-items-center py-md-5 py-3" style="min-height: 90vh;">
-                <div class="col-12">
-                  <img src="{% static 'assets/img/testimonials/paystack2.png ' %}" class="text-center mb-3 img-fluid" alt="">
-                    <h3 class="mb-3 text-warning">Make donations using PayStack</h3>
-                    <ul>
-                        <li>Scholarships for indigent Children -- #10,000</li>
-                        <li>Medical equipment for hospitals -- #25,000</li>
-                        <li>Skill Aquisation Programmes -- #30,000</li>
-                        <li>Potable Water -- #50,000</li>
-                    </ul>
-                    <form action="." method="POST">
-                        {% csrf_token %}
-                        <h4>Enter amount</h4>
-                        <hr>
-                         {{ payment_form | crispy }}
-                         <p>
-                            <input class="btn btn-primary mt-2" type="submit" value="submit">
-                         </p>
-                    </form>
-                    <!-- <h3 class="mt-5">Click image below to pay with PayPal<h3>
-                    <a href="https://www.paypal.com/donate/?hosted_button_id=PPUDKEB3RFP3C"><img src="{% static 'assets/img/testimonials/paypal3png.png ' %}" class="text-center mt-3" alt=""></a> -->
-                </div> 
-            </div>      
-                    
-      </div>
-
+  
+      <div class="single">
+        <div class="container">
+            <div class="row">
+              <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    <div class="single-content">
+                        <div class="section-header">
+                            <img class="text-center mt-5" src="{% static 'assets/img/paystack2.png'%}" />
+                        </div>
+                        
+                              <ul class="mb-3 text-danger">
+                                  <li>Scholarships for indigent Children -- #10,000</li>
+                                  <li>Medical equipment for hospitals -- #25,000</li>
+                                  <li>Skill Aquisation Programmes -- #30,000</li>
+                                  <li>Potable Water -- #50,000</li>
+                              </ul>
+                              <form action="." method="POST">
+                                  {% csrf_token %}
+                                  <h4>Enter amount</h4>
+                                  <hr>
+                                   {{ payment_form | crispy }}
+                                   <p>
+                                      <input class="btn btn-primary mt-2" type="submit" value="submit">
+                                   </p>
+                              </form>
+                              
+                          
+                          
+                    </div>
+                   
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html> 
