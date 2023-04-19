@@ -1,0 +1,175 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>NNEOMA FOUNDATION</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="{% static 'assets/img/favicon.ico'%}" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="{% static 'assets/lib/flaticon/font/flaticon.css'%}" rel="stylesheet">
+        <link href="{% static 'assets/lib/animate/animate.min.css'%}" rel="stylesheet">
+        <!-- <link href="{% static 'assets/lib/owlcarousel/assets/owl.carousel.min.css'%}" rel="stylesheet"> --> 
+    
+       
+        <link href="{% static 'assets/vendor/animate.css/animate.min.css'%}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css'%}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css'%}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/aos/aos.css'%}" rel="stylesheet">
+
+        <link href="{% static 'assets/css/style.css'%}" rel="stylesheet">
+        
+</head>
+
+<body>
+    <div class="container">
+        <div class="d-flex row justify-content-center align-items-center py-md-5 py-3" style="min-height: 90vh;">
+             <div class="col-12">
+                 <h5>Make payment for: Naira {{payment.amount}} </h5>
+                 <hr>
+                     {% csrf_token %}
+                     <script src="https://js.paystack.co/v1/inline.js"></script> 
+                     <button class="btn btn-large btn-success" onclick="PayWithPayStack()" id="django-paystack-button">Make Payment</button>
+             
+             </div>
+        </div>
+  </div>
+        
+
+
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-contact">
+                            <h2>Our Head Office</h2>
+                            <p><i class="fa fa-map-marker-alt"></i>Location, City, Country</p>
+                            <p><i class="fa fa-phone-alt"></i>+2348029632479</p>
+                            <p><i class="fa fa-envelope"></i>info@nneomafoundation.org</p>
+                            <p><i class="fa fa-envelope"></i>chris.e@nneomafoundation.org</p>
+                            <div class="footer-social">
+                                <a class="btn btn-custom" href="https://twitter.com/NHEDSF"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-youtube"></i></a>
+                                <a class="btn btn-custom" href="https://www.instagram.com/nneoma_foundation/"><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-link">
+                            <h2>Popular Links</h2>
+                            <a href="about">About Us</a>
+                            <a href="contact">Contact Us</a>
+                            <a href="event">Upcoming Events</a>
+                            <a href="">Help</a>
+                            <a href="faq">FQAs</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-link">
+                            <h2>Useful Links</h2>
+                            <a href="terms">Terms of use</a>
+                            <a href="p_policy">Privacy policy</a>
+                            <a href="do_policy">Donor Privacy policy</a>
+                            <a href="partnership">Partnership</a>
+                            <a href="cookies">Cookie Policy</a>
+                           
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="container copyright">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; <a href="">Nneoma Foundation</a>, All Right Reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Designed By <a href="">Uclassic Dev</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        <!-- Back to top button -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <!-- Pre Loader -->
+        <div id="loader" class="show">
+            <div class="loader"></div>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script  src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script  src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script> 
+        <script  src="{% static 'assets/lib/easing/easing.min.js'%}"></script> 
+        <script  src="{% static 'assets/lib/owlcarousel/owl.carousel.min.js'%}"></script>
+        <script  src="{% static 'assets/lib/waypoints/waypoints.min.js'%}"></script>
+        <script  src="{% static 'assets/lib/counterup/counterup.min.js'%}"></script>
+        <script  src="{% static 'assets/lib/parallax/parallax.min.js'%}"></script> 
+
+        <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js'%}"></script>
+        <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+        <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js'%}"></script>
+        <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js'%}"></script>
+        <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js'%}"></script>
+        <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js'%}"></script>
+        <script src="{% static 'assets/vendor/aos/aos.js'%}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js'%}"></script>
+
+
+        <!-- Contact Javascript File -->
+        <script src="{% static 'assets/mail/jqBootstrapValidation.min.js'%}"></script>
+        <script src="{% static 'assets/mail/contact.js'%}"></script>
+        
+
+        <!-- Template Javascript -->
+
+        <script>
+            function PayWithPayStack(){
+                let currency ="NGN";
+                let plan = "";
+                let ref = "{{ payment.ref }}"
+                let obj = {
+                    key: "{{ paystack_public_key }}",
+                    email: "{{ payment.email }}",
+                    amount: "{{ payment.amount_value }}",
+                    ref : ref,
+                    callback: function(response){
+                        window.location.href = "{% url 'verify-payment' payment.ref %}"
+                    }
+                }
+        
+                if (Boolean(currency)){
+                    obj.currency = currency.toUpperCase()
+                }
+                if (Boolean(plan)){
+                    obj.plan = plan; 
+                }
+                var handler = PaystackPop.setup(obj);
+                handler.openIframe();
+            }
+        </script>    
+       
+    </body>
+</html>

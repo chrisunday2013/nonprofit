@@ -1,0 +1,61 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png'%}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/aos/aos.css'%}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css ' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css ' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css'%}" rel="stylesheet">
+
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+<body>
+     <div class="container">
+           <div class="d-flex row justify-content-center align-items-center py-md-5 py-3" style="min-height: 90vh;">
+                <div class="col-12">
+                  <img src="{% static 'assets/img/testimonials/paystack2.png ' %}" class="text-center mb-3 img-fluid" alt="">
+                    <h3 class="mb-3 text-warning">Make donations using PayStack</h3>
+                    <ul>
+                        <li>Scholarships for indigent Children -- #10,000</li>
+                        <li>Medical equipment for hospitals -- #25,000</li>
+                        <li>Skill Aquisation Programmes -- #30,000</li>
+                        <li>Potable Water -- #50,000</li>
+                    </ul>
+                    <form action="." method="POST">
+                        {% csrf_token %}
+                        <h4>Enter amount</h4>
+                        <hr>
+                         {{ payment_form | crispy }}
+                         <p>
+                            <input class="btn btn-primary mt-2" type="submit" value="submit">
+                         </p>
+                    </form>
+                    <!-- <h3 class="mt-5">Click image below to pay with PayPal<h3>
+                    <a href="https://www.paypal.com/donate/?hosted_button_id=PPUDKEB3RFP3C"><img src="{% static 'assets/img/testimonials/paypal3png.png ' %}" class="text-center mt-3" alt=""></a> -->
+                </div> 
+            </div>      
+                    
+      </div>
+
+
+</body>
+</html> 
