@@ -4,7 +4,7 @@ from django.contrib.auth.models import User, auth
 from .models import Contact, Testimonial, Volunteer, Events, News_features, Donate,Order, Payment
 from datetime import datetime
 from django.conf import settings
-
+from paypal.standard.forms import PayPalPaymentsForm
 import uuid 
 from . import forms 
 from django.urls import reverse 
@@ -110,10 +110,10 @@ def health(request):
     return render(request, 'health.html' , {"news_features": news_features} )
 
 
-# @requires_csrf_token
-# def donate(request):
+@requires_csrf_token
+def donate(request):
 
-#    return render(request, 'donate.html' )
+   return render(request, 'donate.html' )
 
 
 
@@ -190,23 +190,23 @@ def development(request):
 
 
 
-# @requires_csrf_token
-# def home(request):
-#     host = request.get_host()
-#     paypal_dict = {
-#         'business': settings.PAYPAL_RECEIVER_EMAIL, 
-#         'amount': '30.00', 
-#         'currency_code': 'USD', 
-#         'item_name': 'Product 1', 
-#         'invoice': str(uuid.uuid4()), 
-#         'notify_url': f'http://{host}{reverse("paypal-ipn")}',
-#         'return_url': f'http://{host}{reverse("paypal-return")}',
-#         'cancel_return': f'http://{host}{reverse("paypal-cancel")}',
+@requires_csrf_token
+def home(request):
+    host = request.get_host()
+    paypal_dict = {
+        'business': settings.PAYPAL_RECEIVER_EMAIL, 
+        'amount': '30.00', 
+        'currency_code': 'USD', 
+        'item_name': 'Product 1', 
+        'invoice': str(uuid.uuid4()), 
+        'notify_url': f'http://{host}{reverse("paypal-ipn")}',
+        'return_url': f'http://{host}{reverse("paypal-return")}',
+        'cancel_return': f'http://{host}{reverse("paypal-cancel")}',
 
-#     }    
-#     form = PayPalPaymentsForm(initial=paypal_dict)
-#     context = {'form':form}
-#     return render(request, 'home.html', context)
+    }    
+    form = PayPalPaymentsForm(initial=paypal_dict)
+    context = {'form':form}
+    return render(request, 'home.html', context)
 
 
 @requires_csrf_token

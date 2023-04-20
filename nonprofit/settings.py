@@ -28,6 +28,7 @@ CSRF_TRUSTED_ORIGINS = ['https://nneomafoundation.org']
 
 INSTALLED_APPS = [
     'crispy_forms',
+    'paypal.standard.ipn',
     'main',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -152,3 +153,5 @@ PAYPAL_RECEIVER_EMAIL = os.environ.get('PAYPAL_RECEIVER_EMAIL')
 
 PAYSTACK_SECRET_KEY = os.environ.get('PAYSTACK_SECRET_KEY')
 PAYSTACK_PUBLIC_KEY = os.environ.get('PAYSTACK_PUBLIC_KEY')
+
+PAYPAL_TEST = True 
