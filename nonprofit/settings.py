@@ -28,7 +28,6 @@ CSRF_TRUSTED_ORIGINS = ['https://nneomafoundation.org']
 
 INSTALLED_APPS = [
     'crispy_forms',
-    'paypal.standard.ipn',
     'main',
     'django.contrib.admin',
     'django.contrib.auth',
