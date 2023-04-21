@@ -190,35 +190,35 @@ def development(request):
 
 
 
-# @requires_csrf_token
-# def home(request):
-#     host = request.get_host()
-#     paypal_dict = {
-#         'business': settings.PAYPAL_RECEIVER_EMAIL, 
-#         'amount': '30.00', 
-#         'currency_code': 'USD', 
-#         'item_name': 'Product 1', 
-#         'invoice': str(uuid.uuid4()), 
-#         'notify_url': f'http://{host}{reverse("paypal-ipn")}',
-#         'return_url': f'http://{host}{reverse("paypal-return")}',
-#         'cancel_return': f'http://{host}{reverse("paypal-cancel")}',
+@requires_csrf_token
+def home(request):
+    host = request.get_host()
+    paypal_dict = {
+        'business': settings.PAYPAL_RECEIVER_EMAIL, 
+        'amount': '30.00', 
+        'currency_code': 'USD', 
+        'item_name': 'Product 1', 
+        'invoice': str(uuid.uuid4()), 
+        'notify_url': f'http://{host}{reverse("paypal-ipn")}',
+        'return_url': f'http://{host}{reverse("paypal-return")}',
+        'cancel_return': f'http://{host}{reverse("paypal-cancel")}',
 
-#     }    
-#     form = PayPalPaymentsForm(initial=paypal_dict)
-#     context = {'form':form}
-#     return render(request, 'home.html', context)
-
-
-# @requires_csrf_token
-# def paypal_return(request):
-#     messages.success(request, 'You have successfully made a donation payment!')
-#     return redirect('index')   
+    }    
+    form = PayPalPaymentsForm(initial=paypal_dict)
+    context = {'form':form}
+    return render(request, 'home.html', context)
 
 
-# @requires_csrf_token
-# def paypal_cancel(request):
-#     messages.error(request, 'Your donation payment was cancelled.')
-#     return redirect('index')
+@requires_csrf_token
+def paypal_return(request):
+    messages.success(request, 'You have successfully made a donation payment!')
+    return redirect('index')   
+
+
+@requires_csrf_token
+def paypal_cancel(request):
+    messages.error(request, 'Your donation payment was cancelled.')
+    return redirect('index')
 
 
 @requires_csrf_token
