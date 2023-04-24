@@ -186,8 +186,9 @@ a:focus {
 
 .top-bar .text i {
     font-size: 16px;
-    color: #FDBE33;
+    color: brown;
     margin-right: 5px;
+    text-decoration: none;
 }
 
 .top-bar .text p {
