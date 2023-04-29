@@ -1,12 +1,12 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, HttpRequest
 from django.contrib.auth.models import User, auth 
-from .models import Contact, Testimonial, Volunteer, Events, News_features, Donate,Order, Payment
+from .models import Contact,  Volunteer, Events, News_features, Donate,Order
 from datetime import datetime
 from django.conf import settings
-from paypal.standard.forms import PayPalPaymentsForm
+# from paypal.standard.forms import PayPalPaymentsForm
 import uuid 
-from . import forms 
+# from . import forms 
 from django.urls import reverse 
 from django.contrib import messages
 from django.views.decorators.csrf import  requires_csrf_token
@@ -190,67 +190,67 @@ def development(request):
 
 
 
-@requires_csrf_token
-def home(request):
-    host = request.get_host()
-    paypal_dict = {
-        'business': settings.PAYPAL_RECEIVER_EMAIL, 
-        'amount': '30.00', 
-        'currency_code': 'USD', 
-        'item_name': 'Product 1', 
-        'invoice': str(uuid.uuid4()), 
-        'notify_url': f'http://{host}{reverse("paypal-ipn")}',
-        'return_url': f'http://{host}{reverse("paypal-return")}',
-        'cancel_return': f'http://{host}{reverse("paypal-cancel")}',
+# @requires_csrf_token
+# def home(request):
+#     host = request.get_host()
+#     paypal_dict = {
+#         'business': settings.PAYPAL_RECEIVER_EMAIL, 
+#         'amount': '30.00', 
+#         'currency_code': 'USD', 
+#         'item_name': 'Product 1', 
+#         'invoice': str(uuid.uuid4()), 
+#         'notify_url': f'http://{host}{reverse("paypal-ipn")}',
+#         'return_url': f'http://{host}{reverse("paypal-return")}',
+#         'cancel_return': f'http://{host}{reverse("paypal-cancel")}',
 
-    }    
-    form = PayPalPaymentsForm(initial=paypal_dict)
-    context = {'form':form}
-    return render(request, 'home.html', context)
-
-
-@requires_csrf_token
-def paypal_return(request):
-    messages.success(request, 'You have successfully made a donation payment!')
-    return redirect('index')   
+#     }    
+#     form = PayPalPaymentsForm(initial=paypal_dict)
+#     context = {'form':form}
+#     return render(request, 'home.html', context)
 
 
-@requires_csrf_token
-def paypal_cancel(request):
-    messages.error(request, 'Your donation payment was cancelled.')
-    return redirect('index')
+# @requires_csrf_token
+# def paypal_return(request):
+#     messages.success(request, 'You have successfully made a donation payment!')
+#     return redirect('index')   
 
 
-@requires_csrf_token
-def confirm_payment(request, pk):
-    order = Order.objects.get(id=pk)
-    order.completed = True 
-    order.save()
-    messages.success(request, "Payment made successfully")
+# @requires_csrf_token
+# def paypal_cancel(request):
+#     messages.error(request, 'Your donation payment was cancelled.')
+#     return redirect('index')
 
 
-@requires_csrf_token
-def initiate_payment(request: HttpRequest) -> HttpResponse:
-    if request.method == "POST": 
-        payment_form = forms.PaymentForm(request.POST)
-        if payment_form.is_valid():
-            payment = payment_form.save()
-            return render(request, "make_payment.html", {'payment': payment, 'paystack_public_key': settings.PAYSTACK_PUBLIC_KEY})
-    else: 
-        payment_form = forms.PaymentForm()
-    return render(request, 'initiate_payment.html', {'payment_form': payment_form})            
+# @requires_csrf_token
+# def confirm_payment(request, pk):
+#     order = Order.objects.get(id=pk)
+#     order.completed = True 
+#     order.save()
+#     messages.success(request, "Payment made successfully")
 
 
-@requires_csrf_token
-def verify_payment(request: HttpRequest, ref:str) -> HttpResponse:
-    payment = get_object_or_404(Payment, ref=ref)
-    verified = payment.verify_payment()
-    if verified:
-        messages.success(request, 'Verification Successful')
-    else:
-        messages.error(request, 'verification Failed') 
+# @requires_csrf_token
+# def initiate_payment(request: HttpRequest) -> HttpResponse:
+#     if request.method == "POST": 
+#         payment_form = forms.PaymentForm(request.POST)
+#         if payment_form.is_valid():
+#             payment = payment_form.save()
+#             return render(request, "make_payment.html", {'payment': payment, 'paystack_public_key': settings.PAYSTACK_PUBLIC_KEY})
+#     else: 
+#         payment_form = forms.PaymentForm()
+#     return render(request, 'initiate_payment.html', {'payment_form': payment_form})            
 
-    return redirect('/')
+
+# @requires_csrf_token
+# def verify_payment(request: HttpRequest, ref:str) -> HttpResponse:
+#     payment = get_object_or_404(Payment, ref=ref)
+#     verified = payment.verify_payment()
+#     if verified:
+#         messages.success(request, 'Verification Successful')
+#     else:
+#         messages.error(request, 'verification Failed') 
+
+#     return redirect('/')
 
     
 

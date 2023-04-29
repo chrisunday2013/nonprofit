@@ -1,9 +1,9 @@
-from django import forms
+# from django import forms
 
-from .models import Payment 
+# from .models import Payment 
 
 
-class PaymentForm(forms.ModelForm):
-    class Meta:
-        model = Payment 
-        fields = ("amount", "email")
+# class PaymentForm(forms.ModelForm):
+#     class Meta:
+#         model = Payment 
+#         fields = ("amount", "email")
