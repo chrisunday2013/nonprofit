@@ -1,4 +1,5 @@
 {% load static %}
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -119,6 +120,7 @@
                     <div class="col-lg-5">
                         <div class="volunteer-form">
                             <form>
+                                {% csrf_token %}
                                 <div class="control-group">
                                     <input type="text" class="form-control" placeholder="Name" required="required" />
                                 </div>
