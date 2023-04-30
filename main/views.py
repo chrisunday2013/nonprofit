@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, HttpRequest
 from django.contrib.auth.models import User, auth 
-from .models import Contact,  Volunteer, Events, News_features, Donate,Order
+from .models import Contact,  Volunteer, Events, News_features, Donate, Order
 from datetime import datetime
 from django.conf import settings
 # from paypal.standard.forms import PayPalPaymentsForm

@@ -14,8 +14,8 @@ class News_features(models.Model):
     
 
         
-    def __str__(self):
-        return self.title
+    # def __str__(self):
+    #     return self.title
 
 class Events(models.Model):
     title=models.CharField(max_length= 50, null=False )
@@ -40,9 +40,9 @@ class Team(models.Model):
 
 
 class Volunteer(models.Model):
-    full_name = models.CharField(max_length=100, null=False)   
+    full_name = models.CharField(max_length=100, null=True)   
     email= models.EmailField(max_length=100, null=True)  
-    reason_for_joining= models.TextField(max_length=500, null=False)
+    reason_for_joining= models.TextField(max_length=500, null=True)
 
     def __str__(self):
         return self.full_name
