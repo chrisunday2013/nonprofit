@@ -10,7 +10,7 @@ import uuid
 from django.urls import reverse 
 from django.contrib import messages
 from django.views.decorators.csrf import  requires_csrf_token
-from django.urls import reverse 
+
 
 
 
@@ -28,6 +28,17 @@ def index(request):
         n='Data Sent Successfully'
         redirect(index)
 
+    events=Events.objects.all()
+    news_features=News_features.objects.all()
+    return render(request, 'index.html', {"events": events, "news_features": news_features})
+
+
+
+@requires_csrf_token
+def index(request):
+    
+    n=''
+
     if  request.method == "POST":
         full_name= request.POST.get('full_name')
         email= request.POST.get('email')
@@ -37,9 +48,8 @@ def index(request):
         n='Data Sent Successfully'
         redirect(index)    
 
-    events=Events.objects.all()
-    news_features=News_features.objects.all()
-    return render(request, 'index.html', {"events": events, "news_features": news_features})
+   
+    return render(request, 'index.html', )
 
 
 @requires_csrf_token
