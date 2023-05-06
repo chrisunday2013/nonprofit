@@ -17,7 +17,6 @@ from django.views.decorators.csrf import  requires_csrf_token
 @requires_csrf_token
 def index(request):
     
-    n=''
     if  request.method == "POST":
         full_name= request.POST.get('full_name')
         email= request.POST.get('email')
@@ -28,28 +27,38 @@ def index(request):
         n='Data Sent Successfully'
         redirect(index)
 
-    events=Events.objects.all()
-    news_features=News_features.objects.all()
-    return render(request, 'index.html', {"events": events, "news_features": news_features})
-
-
-
-@requires_csrf_token
-def index(request):
-    
-    n=''
-
     if  request.method == "POST":
         full_name= request.POST.get('full_name')
         email= request.POST.get('email')
         reason_for_joining= request.POST.get('reason_for_joining')
         volunteer = Volunteer(full_name=full_name, email=email, reason_for_joining=reason_for_joining)
         volunteer.save()
-        n='Data Sent Successfully'
+    
         redirect(index)    
+    
+
+    events=Events.objects.all()
+    news_features=News_features.objects.all()
+    return render(request, 'index.html', {"events": events, "news_features": news_features})
+
+
+
+# @requires_csrf_token
+# def index(request):
+    
+#     n=''
+
+#     if  request.method == "POST":
+#         full_name= request.POST.get('full_name')
+#         email= request.POST.get('email')
+#         reason_for_joining= request.POST.get('reason_for_joining')
+#         volunteer = Volunteer(full_name=full_name, email=email, reason_for_joining=reason_for_joining)
+#         volunteer.save()
+#         n='Data Sent Successfully'
+#         redirect(index)    
 
    
-    return render(request, 'index.html', )
+#     return render(request, 'index.html', )
 
 
 @requires_csrf_token
@@ -62,7 +71,6 @@ def about(request):
 @requires_csrf_token
 def contact(request):
     
-    n=''
     if  request.method == "POST":
         full_name= request.POST.get('full_name')
         email= request.POST.get('email')
@@ -70,29 +78,29 @@ def contact(request):
         message= request.POST.get('message')   
         contact = Contact(full_name=full_name, email=email, subject=subject, message=message)
         contact.save()
-        n='Data Sent Successfully'
+    
         redirect(index)
 
     return render(request, 'contact.html'  )
 
 
 
-@requires_csrf_token
-def donate(request):
+# @requires_csrf_token
+# def donate(request):
     
-    n=''
-    if  request.method == "POST":
-        amount= request.POST.get('amount')
-        full_name= request.POST.get('full_name')
-        email= request.POST.get('email')
-        message= request.POST.get('message')   
-        payment= request.POST.get('payment')   
-        donate = Donate(amount=amount, full_name=full_name, email=email, message=message, payment=payment)
-        donate.save()
-        n='Data Sent Successfully'
-        redirect(index)
+#     n=''
+#     if  request.method == "POST":
+#         amount= request.POST.get('amount')
+#         full_name= request.POST.get('full_name')
+#         email= request.POST.get('email')
+#         message= request.POST.get('message')   
+#         payment= request.POST.get('payment')   
+#         donate = Donate(amount=amount, full_name=full_name, email=email, message=message, payment=payment)
+#         donate.save()
+#         n='Data Sent Successfully'
+#         redirect(index)
 
-    return render(request, 'donate.html' ) 
+#     return render(request, 'donate.html' ) 
 
 
 
