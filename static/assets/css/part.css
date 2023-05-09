@@ -1038,45 +1038,7 @@ a:focus {
     color: #FDBE33;
   } 
   
-  /*--------------------------------------------------------------
-  # Cta
-  --------------------------------------------------------------*/
-   .cta {
-    background: linear-gradient(rgba(66, 84, 81, 0.5), rgba(43, 56, 54, 0.5)), url("../img/cta-bg.jpg") fixed center center;
-    background-size: cover;
-    padding: 60px 0;
-  }
   
-  .cta h3 {
-    color: #fff;
-    font-size: 28px;
-    font-weight: 700;
-  }
-  
-  .cta p {
-    color: #fff;
-  }
-  
-  .cta .cta-btn {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 8px 28px;
-    border-radius: 25px;
-    transition: 0.5s;
-    margin-top: 10px;
-    border: 2px solid #FDBE33;
-    color: #fff;
-  }
-  
-  .cta .cta-btn:hover {
-    background: #FDBE33;
-    border: 2px solid #FDBE33;
-  } 
-
-
 /*******************************/
 /********* Donate CSS **********/
 /*******************************/
