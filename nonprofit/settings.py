@@ -24,6 +24,10 @@ ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = ['https://nneomafoundation.org/']
 # CSRF_COOKIE_DOMAIN = ['https://nneomafoundation.org/']
 
+CORS_ALLOWED_ORIGINS = [
+    "https://web-production-bbd4.up.railway.app",
+]
+
 
 # Application definition
 
